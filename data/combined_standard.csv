@@ -1,0 +1,301 @@
+stagione,﻿Rk,Squad,MP,W,D,L,GF,GA,GD,Pts,Pts/MP,Attendance,Top Team Scorer,Goalkeeper,Notes
+2010-2011,1,Milan,38,24,10,4,65,24,41,82,2.16,,"Zlatan Ibrahimović, Robinho... - 14",Christian Abbiati,→ Champions League via league finish
+2010-2011,2,Inter,38,23,7,8,69,42,27,76,2.0,,Samuel Eto'o - 21,Júlio César,→ Champions League via league finish
+2010-2011,3,Napoli,38,21,7,10,59,39,20,70,1.84,,Edinson Cavani - 26,Morgan De Sanctis,→ Champions League via league finish
+2010-2011,4,Udinese,38,20,6,12,65,43,22,66,1.74,,Antonio Di Natale - 28,Samir Handanović,→ Champions League via league finish
+2010-2011,5,Lazio,38,20,6,12,55,39,16,66,1.74,,Hernanes - 11,Fernando Muslera,→ Europa League via league finish
+2010-2011,6,Roma,38,18,9,11,59,52,7,63,1.66,,Francesco Totti - 15,Júlio Sérgio,→ Europa League via league finish 1
+2010-2011,7,Juventus,38,15,13,10,57,47,10,58,1.53,,"Alessandro Matri, Fabio Quagliarella - 9",Marco Storari,
+2010-2011,8,Palermo,38,17,5,16,58,63,-5,56,1.47,,Javier Pastore - 11,Salvatore Sirigu,→ Europa League via cup loss 2
+2010-2011,9,Fiorentina,38,12,15,11,49,44,5,51,1.34,,Alberto Gilardino - 12,Artur Boruc,
+2010-2011,10,Genoa,38,14,9,15,45,47,-2,51,1.34,,Antonio Floro Flores - 10,Eduardo Carvalho,
+2010-2011,11,Chievo,38,11,13,14,38,40,-2,46,1.21,,Sergio Pellissier - 11,Stefano Sorrentino,
+2010-2011,12,Parma,38,11,13,14,39,47,-8,46,1.21,,Hernán Crespo - 9,Antonio Mirante,
+2010-2011,13,Catania,38,12,10,16,40,52,-12,46,1.21,,Maxi López - 8,Mariano Andújar,
+2010-2011,14,Cagliari,38,12,9,17,44,51,-7,45,1.18,,Alessandro Matri - 11,Michael Agazzi,
+2010-2011,15,Cesena,38,11,10,17,38,50,-12,43,1.13,,Luis Jiménez - 9,Francesco Antonioli,
+2010-2011,16,Bologna,38,11,12,15,35,52,-17,42,1.11,,Marco Di Vaio - 19,Emiliano Viviano,3-point deduction 3
+2010-2011,17,Lecce,38,11,8,19,46,66,-20,41,1.08,,David Di Michele - 8,Antonio Rosati,
+2010-2011,18,Sampdoria,38,8,12,18,33,49,-16,36,0.95,,"Giampaolo Pazzini, Nicola Pozzi - 6",Gianluca Curci,Relegated
+2010-2011,19,Brescia,38,7,11,20,34,52,-18,32,0.84,,Andrea Caracciolo - 12,Michele Arcari,Relegated
+2010-2011,20,Bari,38,5,9,24,27,56,-29,24,0.63,,Paulo Vitor Barreto - 4,Jean-François Gillet,Relegated
+2011-2012,1,Juventus,38,23,15,0,68,20,48,84,2.21,,Alessandro Matri - 10,Gianluigi Buffon,→ Champions League via league finish
+2011-2012,2,Milan,38,24,8,6,74,33,41,80,2.11,,Zlatan Ibrahimović - 28,Christian Abbiati,→ Champions League via league finish
+2011-2012,3,Udinese,38,18,10,10,52,35,17,64,1.68,,Antonio Di Natale - 23,Samir Handanović,→ Champions League via league finish
+2011-2012,4,Lazio,38,18,8,12,56,47,9,62,1.63,,Miroslav Klose - 13,Federico Marchetti,→ Europa League via league finish
+2011-2012,5,Napoli,38,16,13,9,66,46,20,61,1.61,,Edinson Cavani - 23,Morgan De Sanctis,→ Europa League via cup win 1
+2011-2012,6,Inter,38,17,7,14,58,55,3,58,1.53,,Diego Milito - 24,Júlio César,→ Europa League via league finish
+2011-2012,7,Roma,38,16,8,14,60,54,6,56,1.47,,Dani Osvaldo - 11,Maarten Stekelenburg,
+2011-2012,8,Parma,38,15,11,12,54,53,1,56,1.47,,Sebastian Giovinco - 15,Antonio Mirante,
+2011-2012,9,Bologna,38,13,12,13,41,43,-2,51,1.34,,Marco Di Vaio - 10,Jean-François Gillet,
+2011-2012,10,Chievo,38,12,13,13,35,45,-10,49,1.29,,Sergio Pellissier - 8,Stefano Sorrentino,
+2011-2012,11,Catania,38,11,15,12,47,52,-5,48,1.26,,Francesco Lodi - 9,Mariano Andújar,
+2011-2012,12,Atalanta,38,13,13,12,41,43,-2,46,1.21,,Germán Denis - 16,Andrea Consigli,6-point deduction 2
+2011-2012,13,Fiorentina,38,11,13,14,37,43,-6,46,1.21,,Stevan Jovetić - 14,Artur Boruc,
+2011-2012,14,Siena,38,11,11,16,45,45,0,44,1.16,,Mattia Destro - 12,Gianluca Pegolo,
+2011-2012,15,Cagliari,38,10,13,15,37,46,-9,43,1.13,,Mauricio Pinilla - 8,Michael Agazzi,
+2011-2012,16,Palermo,38,11,10,17,52,62,-10,43,1.13,,Fabrizio Miccoli - 16,Emiliano Viviano,
+2011-2012,17,Genoa,38,11,9,18,50,69,-19,42,1.11,,Rodrigo Palacio - 19,Sébastien Frey,
+2011-2012,18,Lecce,38,8,12,18,40,56,-16,36,0.95,,David Di Michele - 11,Massimiliano Benassi,Relegated 3
+2011-2012,19,Novara,38,7,11,20,35,65,-30,32,0.84,,Marco Rigoni - 11,Samir Ujkani,Relegated
+2011-2012,20,Cesena,38,4,10,24,24,60,-36,22,0.58,,Adrian Mutu - 8,Francesco Antonioli,Relegated
+2012-2013,1,Juventus,38,27,6,5,71,24,47,87,2.29,,"Arturo Vidal, Mirko Vučinić - 10",Gianluigi Buffon,→ Champions League via league finish
+2012-2013,2,Napoli,38,23,9,6,73,36,37,78,2.05,,Edinson Cavani - 29,Morgan De Sanctis,→ Champions League via league finish
+2012-2013,3,Milan,38,21,9,8,67,39,28,72,1.89,,Stephan El Shaarawy - 16,Christian Abbiati,→ Champions League via league finish
+2012-2013,4,Fiorentina,38,21,7,10,72,44,28,70,1.84,,Stevan Jovetić - 13,Emiliano Viviano,→ Europa League via league finish
+2012-2013,5,Udinese,38,18,12,8,59,45,14,66,1.74,,Antonio Di Natale - 23,Željko Brkić,→ Europa League via league finish
+2012-2013,6,Roma,38,18,8,12,71,56,15,62,1.63,,Dani Osvaldo - 16,Maarten Stekelenburg,
+2012-2013,7,Lazio,38,18,7,13,51,42,9,61,1.61,,Miroslav Klose - 15,Federico Marchetti,→ Europa League via cup win 1
+2012-2013,8,Catania,38,15,11,12,50,46,4,56,1.47,,Gonzalo Bergessio - 13,Mariano Andújar,
+2012-2013,9,Inter,38,16,6,16,55,57,-2,54,1.42,,Rodrigo Palacio - 12,Samir Handanović,
+2012-2013,10,Parma,38,13,10,15,45,46,-1,49,1.29,,Amauri - 10,Antonio Mirante,
+2012-2013,11,Cagliari,38,12,11,15,43,55,-12,47,1.24,,Marco Sau - 12,Michael Agazzi,
+2012-2013,12,Chievo,38,12,9,17,37,52,-15,45,1.18,,Cyril Théréau - 11,Stefano Sorrentino,
+2012-2013,13,Bologna,38,11,11,16,46,52,-6,44,1.16,,Alberto Gilardino - 13,Federico Agliardi,
+2012-2013,14,Sampdoria,38,11,10,17,43,51,-8,42,1.11,,Mauro Icardi - 10,Sergio Romero,1-point deduction 2
+2012-2013,15,Atalanta,38,11,9,18,39,56,-17,40,1.05,,Germán Denis - 15,Andrea Consigli,2-point deduction 3
+2012-2013,16,Torino,38,8,16,14,46,55,-9,39,1.03,,Rolando Bianchi - 11,Jean-François Gillet,1-point deduction 4
+2012-2013,17,Genoa,38,8,14,16,38,52,-14,38,1.0,,Marco Borriello - 12,Sébastien Frey,
+2012-2013,18,Palermo,38,6,14,18,34,54,-20,32,0.84,,Josip Iličić - 10,Samir Ujkani,Relegated
+2012-2013,19,Siena,38,9,9,20,36,57,-21,30,0.79,,Innocent Emeghara - 7,Gianluca Pegolo,"6-point deduction 5, Relegated"
+2012-2013,20,Pescara,38,6,4,28,27,84,-57,22,0.58,,"Mervan Çelik, Vladimír Weiss - 4",Mattia Perin,Relegated
+2013-2014,1,Juventus,38,33,3,2,80,23,57,102,2.68,,Carlos Tevez - 19,Gianluigi Buffon,→ Champions League via league finish
+2013-2014,2,Roma,38,26,7,5,72,25,47,85,2.24,,Mattia Destro - 13,Morgan De Sanctis,→ Champions League via league finish
+2013-2014,3,Napoli,38,23,9,6,77,39,38,78,2.05,,Gonzalo Higuaín - 17,Pepe Reina,→ Champions League via league finish
+2013-2014,4,Fiorentina,38,19,8,11,65,44,21,65,1.71,,Giuseppe Rossi - 16,Neto,→ Europa League via league finish 1
+2013-2014,5,Inter,38,15,15,8,62,39,23,60,1.58,,Rodrigo Palacio - 17,Samir Handanović,→ Europa League via league finish
+2013-2014,6,Parma,38,15,13,10,58,46,12,58,1.53,,Antonio Cassano - 12,Antonio Mirante,
+2013-2014,7,Torino,38,15,12,11,58,48,10,57,1.5,,Ciro Immobile - 22,Daniele Padelli,→ Europa League via league finish
+2013-2014,8,Milan,38,16,9,13,57,49,8,57,1.5,,Mario Balotelli - 14,Christian Abbiati,
+2013-2014,9,Lazio,38,15,11,12,54,54,0,56,1.47,,Antonio Candreva - 12,Federico Marchetti,
+2013-2014,10,Hellas Verona,38,16,6,16,62,68,-6,54,1.42,,Luca Toni - 20,Rafael,
+2013-2014,11,Atalanta,38,15,5,18,43,51,-8,50,1.32,,Germán Denis - 13,Andrea Consigli,
+2013-2014,12,Sampdoria,38,12,9,17,48,62,-14,45,1.18,,Éder - 12,Angelo da Costa Júnior,
+2013-2014,13,Udinese,38,12,8,18,46,57,-11,44,1.16,,Antonio Di Natale - 17,Simone Scuffet,
+2013-2014,14,Genoa,38,11,11,16,41,50,-9,44,1.16,,Alberto Gilardino - 15,Mattia Perin,
+2013-2014,15,Cagliari,38,9,12,17,34,53,-19,39,1.03,,Mauricio Pinilla - 7,Vlada Avramov,
+2013-2014,16,Chievo,38,10,6,22,34,54,-20,36,0.95,,Alberto Paloschi - 13,Christian Puggioni,
+2013-2014,17,Sassuolo,38,9,7,22,43,72,-29,34,0.89,,Domenico Berardi - 16,Gianluca Pegolo,
+2013-2014,18,Catania,38,8,8,22,34,66,-32,32,0.84,,Gonzalo Bergessio - 10,Mariano Andújar,Relegated
+2013-2014,19,Bologna,38,5,14,19,28,58,-30,29,0.76,,"Panagiotis Kone, Alessandro Diamanti - 5",Gianluca Curci,Relegated
+2013-2014,20,Livorno,38,6,7,25,39,77,-38,25,0.66,,Paulinho - 15,Francesco Bardi,Relegated
+2014-2015,1,Juventus,38,26,9,3,72,24,48,87,2.29,38533,Carlos Tevez - 20,Gianluigi Buffon,→ Champions League via league finish
+2014-2015,2,Roma,38,19,13,6,54,31,23,70,1.84,40135,"Francesco Totti, Adem Ljajić - 8",Morgan De Sanctis,→ Champions League via league finish
+2014-2015,3,Lazio,38,21,6,11,71,38,33,69,1.82,35105,Miroslav Klose - 13,Federico Marchetti,→ Champions League via league finish
+2014-2015,4,Fiorentina,38,18,10,10,61,46,15,64,1.68,30321,Josip Iličić - 8,Neto,→ Europa League via league finish
+2014-2015,5,Napoli,38,18,9,11,70,54,16,63,1.66,33969,Gonzalo Higuaín - 18,Rafael Cabral,→ Europa League via league finish 1
+2014-2015,6,Genoa,38,16,11,11,62,47,15,59,1.55,20031,Iago Falque - 13,Mattia Perin,
+2014-2015,7,Sampdoria,38,13,17,8,48,42,6,56,1.47,21746,Éder - 9,Emiliano Viviano,→ Europa League via league finish
+2014-2015,8,Inter,38,14,13,11,59,48,11,55,1.45,37062,Mauro Icardi - 22,Samir Handanović,
+2014-2015,9,Torino,38,14,12,12,48,45,3,54,1.42,15674,Fabio Quagliarella - 13,Daniele Padelli,
+2014-2015,10,Milan,38,13,13,12,56,50,6,52,1.37,36661,Jérémy Ménez - 16,Diego López,
+2014-2015,11,Palermo,38,12,13,13,53,55,-2,49,1.29,17481,Paulo Dybala - 13,Stefano Sorrentino,
+2014-2015,12,Sassuolo,38,12,13,13,49,57,-8,49,1.29,12820,Domenico Berardi - 15,Andrea Consigli,
+2014-2015,13,Hellas Verona,38,11,13,14,49,65,-16,46,1.21,19303,Luca Toni - 22,Rafael,
+2014-2015,14,Chievo,38,10,13,15,28,41,-13,43,1.13,11317,Alberto Paloschi - 9,Albano Bizzarri,
+2014-2015,15,Empoli,38,8,18,12,46,52,-6,42,1.11,9180,Massimo Maccarone - 10,Luigi Sepe,
+2014-2015,16,Udinese,38,10,11,17,43,56,-13,41,1.08,8936,Antonio Di Natale - 14,Orestis Karnezis,
+2014-2015,17,Atalanta,38,7,16,15,38,57,-19,37,0.97,15162,Germán Denis - 8,Marco Sportiello,
+2014-2015,18,Cagliari,38,8,10,20,48,68,-20,34,0.89,10896,Marco Sau - 7,Željko Brkić,Relegated
+2014-2015,19,Cesena,38,4,12,22,36,73,-37,24,0.63,16260,Grégoire Defrel - 9,Nicola Leali,Relegated
+2014-2015,20,Parma,38,6,8,24,33,75,-42,19,0.5,11905,Antonio Cassano - 5,Antonio Mirante,"7-point deduction 2, Relegated 3"
+2015-2016,1,Juventus,38,29,4,5,75,20,55,91,2.39,38463,Paulo Dybala - 19,Gianluigi Buffon,→ Champions League via league finish
+2015-2016,2,Napoli,38,25,7,6,80,32,48,82,2.16,39436,Gonzalo Higuaín - 36,Pepe Reina,→ Champions League via league finish
+2015-2016,3,Roma,38,23,11,4,83,41,42,80,2.11,40190,Mohamed Salah - 14,Wojciech Szczęsny,→ Champions League via league finish
+2015-2016,4,Inter,38,20,7,11,50,38,12,67,1.76,45538,Mauro Icardi - 16,Samir Handanović,→ Europa League via league finish
+2015-2016,5,Fiorentina,38,18,10,10,60,42,18,64,1.68,29698,Josip Iličić - 13,Ciprian Tătărușanu,→ Europa League via league finish 1
+2015-2016,6,Sassuolo,38,16,13,9,49,40,9,61,1.61,12078,"Nicola Sansone, Domenico Berardi... - 7",Andrea Consigli,→ Europa League via league finish
+2015-2016,7,Milan,38,15,12,11,49,43,6,57,1.5,37823,Carlos Bacca - 18,Gianluigi Donnarumma,
+2015-2016,8,Lazio,38,15,9,14,52,52,0,54,1.42,20561,Antonio Candreva - 10,Federico Marchetti,
+2015-2016,9,Chievo,38,13,11,14,43,45,-2,50,1.32,11132,Alberto Paloschi - 8,Albano Bizzarri,
+2015-2016,10,Empoli,38,12,10,16,40,49,-9,46,1.21,10220,Massimo Maccarone - 13,Łukasz Skorupski,
+2015-2016,11,Genoa,38,13,7,18,45,48,-3,46,1.21,20938,Leonardo Pavoletti - 14,Mattia Perin,
+2015-2016,12,Torino,38,12,9,17,52,55,-3,45,1.18,19560,Andrea Belotti - 12,Daniele Padelli,
+2015-2016,13,Atalanta,38,11,12,15,41,47,-6,45,1.18,15945,Papu Gómez - 7,Marco Sportiello,
+2015-2016,14,Bologna,38,11,9,18,33,45,-12,42,1.11,20908,Mattia Destro - 8,Antonio Mirante,
+2015-2016,15,Sampdoria,38,10,10,18,48,61,-13,40,1.05,21969,Éder - 12,Emiliano Viviano,
+2015-2016,16,Palermo,38,10,9,19,38,65,-27,39,1.03,19108,Alberto Gilardino - 10,Stefano Sorrentino,
+2015-2016,17,Udinese,38,10,9,19,35,60,-25,39,1.03,16698,Cyril Théréau - 11,Orestis Karnezis,
+2015-2016,18,Carpi,38,9,11,18,37,57,-20,38,1.0,8808,Kevin Lasagna - 5,Vid Belec,Relegated
+2015-2016,19,Frosinone,38,8,7,23,35,76,-41,31,0.82,7250,"Daniel Ciofani, Federico Dionisi - 9",Nicola Leali,Relegated
+2015-2016,20,Hellas Verona,38,5,13,20,34,63,-29,28,0.74,18184,"Giampaolo Pazzini, Luca Toni - 6",Pierluigi Gollini,Relegated
+2016-2017,1,Juventus,38,29,4,5,77,27,50,91,2.39,39518,Gonzalo Higuaín - 24,Gianluigi Buffon,→ Champions League via league finish
+2016-2017,2,Roma,38,28,3,7,90,38,52,87,2.29,32638,Edin Džeko - 29,Wojciech Szczęsny,→ Champions League via league finish
+2016-2017,3,Napoli,38,26,8,4,94,39,55,86,2.26,36605,Dries Mertens - 28,Pepe Reina,→ Champions League via league finish
+2016-2017,4,Atalanta,38,21,9,8,62,41,21,72,1.89,16946,Papu Gómez - 16,Etrit Berisha,→ Europa League via league finish
+2016-2017,5,Lazio,38,21,7,10,74,51,23,70,1.84,21053,Ciro Immobile - 23,Thomas Strakosha,→ Europa League via league finish 1
+2016-2017,6,Milan,38,18,9,11,57,45,12,63,1.66,40294,Carlos Bacca - 13,Gianluigi Donnarumma,→ Europa League via league finish
+2016-2017,7,Inter,38,19,5,14,72,49,23,62,1.63,45689,Mauro Icardi - 24,Samir Handanović,
+2016-2017,8,Fiorentina,38,16,12,10,63,57,6,60,1.58,26470,Nikola Kalinić - 15,Ciprian Tătărușanu,
+2016-2017,9,Torino,38,13,14,11,71,66,5,53,1.39,19300,Andrea Belotti - 26,Joe Hart,
+2016-2017,10,Sampdoria,38,12,12,14,49,55,-6,48,1.26,19852,Fabio Quagliarella - 12,Christian Puggioni,
+2016-2017,11,Cagliari,38,14,5,19,55,76,-21,47,1.24,13024,Marco Borriello - 16,Rafael,
+2016-2017,12,Sassuolo,38,13,7,18,58,63,-5,46,1.21,12362,Grégoire Defrel - 12,Andrea Consigli,
+2016-2017,13,Udinese,38,12,9,17,47,56,-9,45,1.18,16716,Cyril Théréau - 12,Orestis Karnezis,
+2016-2017,14,Chievo,38,12,7,19,43,61,-18,43,1.13,12711,Roberto Inglese - 10,Stefano Sorrentino,
+2016-2017,15,Bologna,38,11,8,19,40,58,-18,41,1.08,21912,Mattia Destro - 11,Antonio Mirante,
+2016-2017,16,Genoa,38,9,9,20,38,64,-26,36,0.95,21445,Giovanni Simeone - 12,Eugenio Lamanna,
+2016-2017,17,Crotone,38,9,7,22,34,58,-24,34,0.89,8226,Diego Falcinelli - 13,Alex Cordaz,
+2016-2017,18,Empoli,38,8,8,22,29,61,-32,32,0.84,9483,Levan Mchedlidze - 6,Łukasz Skorupski,Relegated
+2016-2017,19,Palermo,38,6,8,24,33,77,-44,26,0.68,12871,Ilija Nestorovski - 11,Josip Posavec,Relegated
+2016-2017,20,Pescara,38,3,9,26,37,81,-44,18,0.47,13308,Gianluca Caprari - 9,Albano Bizzarri,Relegated
+2017-2018,1,Juventus,38,30,5,3,86,24,62,95,2.5,55.3,27.4,27.9,0.73,38919,Paulo Dybala - 22,Gianluigi Buffon,→ Champions League via league finish
+2017-2018,2,Napoli,38,28,7,3,77,29,48,91,2.39,67.1,27.1,40.1,1.05,42633,Dries Mertens - 18,Pepe Reina,→ Champions League via league finish
+2017-2018,3,Roma,38,23,8,7,61,28,33,77,2.03,63.4,37.2,26.2,0.69,37451,Edin Džeko - 16,Alisson,→ Champions League via league finish
+2017-2018,4,Inter,38,20,12,6,66,30,36,72,1.89,56.7,37.2,19.6,0.52,57529,Mauro Icardi - 29,Samir Handanović,→ Champions League via league finish
+2017-2018,5,Lazio,38,21,9,8,89,49,40,72,1.89,63.7,43.9,19.9,0.52,32123,Ciro Immobile - 29,Thomas Strakosha,→ Europa League via league finish
+2017-2018,6,Milan,38,18,10,10,56,42,14,64,1.68,51.2,36.9,14.3,0.38,52690,Patrick Cutrone - 10,Gianluigi Donnarumma,→ Europa League via league finish 1
+2017-2018,7,Atalanta,38,16,12,10,57,39,18,60,1.58,64.1,36.6,27.5,0.72,17923,Josip Iličić - 11,Etrit Berisha,→ Europa League via league finish
+2017-2018,8,Fiorentina,38,16,9,13,54,46,8,57,1.5,54.5,40.8,13.7,0.36,26092,Giovanni Simeone - 14,Marco Sportiello,
+2017-2018,9,Torino,38,13,15,10,54,46,8,54,1.42,46.0,47.0,-1.0,-0.03,18375,Iago Falque - 12,Salvatore Sirigu,
+2017-2018,10,Sampdoria,38,16,6,16,56,60,-4,54,1.42,53.5,60.3,-6.8,-0.18,20065,Fabio Quagliarella - 19,Emiliano Viviano,
+2017-2018,11,Sassuolo,38,11,10,17,29,59,-30,43,1.13,46.3,48.9,-2.6,-0.07,11004,Matteo Politano - 10,Andrea Consigli,
+2017-2018,12,Genoa,38,11,8,19,33,43,-10,41,1.08,43.5,42.6,0.9,0.02,20731,Gianluca Lapadula - 6,Mattia Perin,
+2017-2018,13,Chievo,38,10,10,18,36,59,-23,40,1.05,34.1,55.2,-21.2,-0.56,11436,Roberto Inglese - 12,Stefano Sorrentino,
+2017-2018,14,Udinese,38,12,4,22,48,63,-15,40,1.05,43.2,49.3,-6.1,-0.16,16159,Kevin Lasagna - 12,Albano Bizzarri,
+2017-2018,15,Bologna,38,11,6,21,40,52,-12,39,1.03,36.6,51.4,-14.8,-0.39,22556,Simone Verdi - 10,Antonio Mirante,
+2017-2018,16,Cagliari,38,11,6,21,33,61,-28,39,1.03,39.7,59.2,-19.5,-0.51,14651,Leonardo Pavoletti - 11,Alessio Cragno,
+2017-2018,17,SPAL,38,8,14,16,39,59,-20,38,1.0,35.8,57.7,-21.9,-0.58,12065,Mirco Antenucci - 11,Alfred Gomis,
+2017-2018,18,Crotone,38,9,8,21,40,66,-26,35,0.92,34.6,58.6,-24.0,-0.63,10788,"Marcello Trotta, Simeon Nwankwo - 7",Alex Cordaz,Relegated
+2017-2018,19,Hellas Verona,38,7,4,27,30,78,-48,25,0.66,33.0,70.2,-37.1,-0.98,17432,"Moise Kean, Giampaolo Pazzini - 4",Nícolas Andrade,Relegated
+2017-2018,20,Benevento,38,6,3,29,33,84,-51,21,0.55,38.3,73.2,-34.9,-0.92,12200,Cheick Diabaté - 8,Christian Puggioni,Relegated
+2018-2019,1,Juventus,38,28,6,4,70,30,40,90,2.37,60.7,35.8,25.0,0.66,37799,Cristiano Ronaldo - 21,Wojciech Szczęsny,→ Champions League via league finish
+2018-2019,2,Napoli,38,24,7,7,74,36,38,79,2.08,61.8,38.2,23.5,0.62,29003,Arkadiusz Milik - 17,David Ospina,→ Champions League via league finish
+2018-2019,3,Atalanta,38,20,9,9,77,46,31,69,1.82,72.2,41.1,31.1,0.82,18301,Duván Zapata - 23,Pierluigi Gollini,→ Champions League via league finish
+2018-2019,4,Inter,38,20,9,9,57,33,24,69,1.82,63.8,38.3,25.6,0.67,57405,Mauro Icardi - 11,Samir Handanović,→ Champions League via league finish
+2018-2019,5,Milan,38,19,11,8,55,36,19,68,1.79,48.8,41.2,7.6,0.2,54651,Krzysztof Piątek - 9,Gianluigi Donnarumma,Ineligible for continental competition 1
+2018-2019,6,Roma,38,18,12,8,66,48,18,66,1.74,64.4,52.1,12.2,0.32,38622,Stephan El Shaarawy - 11,Robin Olsen,→ Europa League via league finish
+2018-2019,7,Torino,38,16,15,7,52,37,15,63,1.66,46.6,47.7,-1.1,-0.03,21323,Andrea Belotti - 15,Salvatore Sirigu,→ Europa League via league finish
+2018-2019,8,Lazio,38,17,8,13,56,46,10,59,1.55,60.4,47.0,13.4,0.35,33997,Ciro Immobile - 15,Thomas Strakosha,→ Europa League via cup win 2
+2018-2019,9,Sampdoria,38,15,8,15,60,51,9,53,1.39,50.5,55.0,-4.5,-0.12,20263,Fabio Quagliarella - 26,Emil Audero,
+2018-2019,10,Bologna,38,11,11,16,48,56,-8,44,1.16,46.8,49.0,-2.2,-0.06,21237,"Federico Santander, Riccardo Orsolini - 8",Łukasz Skorupski,
+2018-2019,11,Sassuolo,38,9,16,13,53,60,-7,43,1.13,48.5,57.4,-8.9,-0.23,12369,Domenico Berardi - 8,Andrea Consigli,
+2018-2019,12,Udinese,38,11,10,17,39,53,-14,43,1.13,42.5,59.7,-17.2,-0.45,20414,Rodrigo De Paul - 9,Juan Musso,
+2018-2019,13,SPAL,38,11,9,18,44,56,-12,42,1.11,43.9,51.3,-7.3,-0.19,14745,Andrea Petagna - 16,Alfred Gomis,
+2018-2019,14,Parma,38,10,11,17,41,61,-20,41,1.08,40.2,65.3,-25.1,-0.66,16522,Gervinho - 11,Luigi Sepe,
+2018-2019,15,Cagliari,38,10,11,17,36,54,-18,41,1.08,42.1,62.1,-20.0,-0.53,15396,Leonardo Pavoletti - 16,Alessio Cragno,
+2018-2019,16,Fiorentina,38,8,17,13,47,45,2,41,1.08,54.0,41.0,13.0,0.34,31178,Marco Benassi - 7,Alban Lafont,
+2018-2019,17,Genoa,38,8,14,16,39,57,-18,38,1.0,46.9,53.3,-6.4,-0.17,20950,Krzysztof Piątek - 13,Ionuț Radu,
+2018-2019,18,Empoli,38,10,8,20,51,70,-19,38,1.0,52.4,63.6,-11.3,-0.3,9620,Francesco Caputo - 16,Ivan Provedel,Relegated
+2018-2019,19,Frosinone,38,5,10,23,29,69,-40,25,0.66,38.9,62.0,-23.1,-0.61,12656,Camillo Ciano - 7,Marco Sportiello,Relegated
+2018-2019,20,Chievo,38,2,14,22,25,75,-50,17,0.45,36.0,60.3,-24.3,-0.64,12142,Mariusz Stępiński - 6,Stefano Sorrentino,"3-point deduction 3, Relegated"
+2019-2020,1,Juventus,38,26,5,7,76,43,33,83,2.18,71.1,44.9,26.1,0.69,25102,Cristiano Ronaldo - 31,Wojciech Szczęsny,→ Champions League via league finish
+2019-2020,2,Inter,38,24,10,4,81,36,45,82,2.16,69.4,40.7,28.7,0.76,41558,Romelu Lukaku - 23,Samir Handanović,→ Champions League via league finish
+2019-2020,3,Atalanta,38,23,9,6,98,48,50,78,2.05,83.5,41.3,42.2,1.11,11167,"Luis Muriel, Duván Zapata - 18",Pierluigi Gollini,→ Champions League via league finish
+2019-2020,4,Lazio,38,24,6,8,79,42,37,78,2.05,68.0,51.1,16.9,0.44,26363,Ciro Immobile - 36,Thomas Strakosha,→ Champions League via league finish
+2019-2020,5,Roma,38,21,7,10,77,51,26,70,1.84,73.2,49.4,23.9,0.63,26956,Edin Džeko - 16,Pau López,→ Europa League via league finish
+2019-2020,6,Milan,38,19,9,10,63,46,17,66,1.74,62.8,45.1,17.6,0.46,34078,Ante Rebić - 11,Gianluigi Donnarumma,→ Europa League via league finish
+2019-2020,7,Napoli,38,18,8,12,61,50,11,62,1.63,61.7,44.7,16.9,0.45,21622,Arkadiusz Milik - 11,Alex Meret,→ Europa League via cup win 1
+2019-2020,8,Sassuolo,38,14,9,15,69,63,6,51,1.34,52.9,62.0,-9.2,-0.24,7704,Francesco Caputo - 21,Andrea Consigli,
+2019-2020,9,Hellas Verona,38,12,13,13,47,51,-4,49,1.29,50.5,53.7,-3.2,-0.08,11248,Samuel Di Carmine - 8,Marco Silvestri,
+2019-2020,10,Fiorentina,38,12,13,13,51,48,3,49,1.29,53.6,48.9,4.7,0.12,22486,Federico Chiesa - 10,Bartłomiej Drągowski,
+2019-2020,11,Parma,38,14,7,17,56,57,-1,49,1.29,48.4,64.3,-15.9,-0.42,10245,Andreas Cornelius - 12,Luigi Sepe,
+2019-2020,12,Bologna,38,12,11,15,52,65,-13,47,1.24,56.9,54.8,2.0,0.05,15774,Musa Barrow - 9,Łukasz Skorupski,
+2019-2020,13,Udinese,38,12,9,17,37,51,-14,45,1.18,41.6,53.4,-11.8,-0.31,13841,Kevin Lasagna - 10,Juan Musso,
+2019-2020,14,Cagliari,38,11,12,15,52,56,-4,45,1.18,41.8,59.0,-17.2,-0.45,10728,João Pedro - 18,Robin Olsen,
+2019-2020,15,Sampdoria,38,12,6,20,48,65,-17,42,1.11,50.2,54.9,-4.7,-0.12,13700,"Manolo Gabbiadini, Fabio Quagliarella - 11",Emil Audero,
+2019-2020,16,Torino,38,11,7,20,46,68,-22,40,1.05,44.8,60.8,-16.0,-0.42,13338,Andrea Belotti - 16,Salvatore Sirigu,
+2019-2020,17,Genoa,38,10,9,19,47,73,-26,39,1.03,48.7,60.0,-11.3,-0.3,14016,Goran Pandev - 9,Mattia Perin,
+2019-2020,18,Lecce,38,9,8,21,52,85,-33,35,0.92,54.7,85.6,-30.8,-0.81,15939,Marco Mancosu - 14,Gabriel,Relegated
+2019-2020,19,Brescia,38,6,7,25,35,79,-44,25,0.66,43.4,74.5,-31.2,-0.82,10050,"Ernesto Torregrossa, Alfredo Donnarumma - 7",Jesse Joronen,Relegated
+2019-2020,20,SPAL,38,5,5,28,27,77,-50,20,0.53,40.7,68.6,-27.9,-0.73,8241,Andrea Petagna - 12,Etrit Berisha,Relegated
+2020-2021,1,Inter,38,28,7,3,89,35,54,91,2.39,74.2,39.8,34.3,0.9,158,Romelu Lukaku - 24,Samir Handanović,→ Champions League via league finish
+2020-2021,2,Milan,38,24,7,7,74,41,33,79,2.08,70.7,47.0,23.7,0.62,105,Zlatan Ibrahimović - 15,Gianluigi Donnarumma,→ Champions League via league finish
+2020-2021,3,Atalanta,38,23,9,6,90,47,43,78,2.05,74.7,41.0,33.7,0.89,105,Luis Muriel - 22,Pierluigi Gollini,→ Champions League via league finish
+2020-2021,4,Juventus,38,23,9,6,77,38,39,78,2.05,74.4,39.4,35.0,0.92,105,Cristiano Ronaldo - 29,Wojciech Szczęsny,→ Champions League via league finish
+2020-2021,5,Napoli,38,24,5,9,86,41,45,77,2.03,67.7,42.6,25.2,0.66,105,Lorenzo Insigne - 19,Alex Meret,→ Europa League via league finish
+2020-2021,6,Lazio,38,21,5,12,61,55,6,68,1.79,58.2,47.3,10.9,0.29,158,Ciro Immobile - 20,Pepe Reina,→ Europa League via league finish 1
+2020-2021,7,Roma,38,18,8,12,68,58,10,62,1.63,65.3,45.6,19.7,0.53,105,Henrikh Mkhitaryan - 13,Pau López,→ Europa Conference League via league finish
+2020-2021,8,Sassuolo,38,17,11,10,64,56,8,62,1.63,58.4,55.4,3.0,0.08,134,Domenico Berardi - 17,Andrea Consigli,
+2020-2021,9,Sampdoria,38,15,7,16,52,54,-2,52,1.37,45.4,56.1,-10.7,-0.28,105,Fabio Quagliarella - 13,Emil Audero,
+2020-2021,10,Hellas Verona,38,11,12,15,46,48,-2,45,1.18,45.3,49.5,-4.1,-0.11,611,Antonín Barák - 7,Marco Silvestri,
+2020-2021,11,Genoa,38,10,12,16,47,58,-11,42,1.11,38.8,60.4,-21.6,-0.57,53,Mattia Destro - 11,Mattia Perin,
+2020-2021,12,Bologna,38,10,11,17,51,65,-14,41,1.08,54.6,62.6,-7.9,-0.21,105,Roberto Soriano - 9,Łukasz Skorupski,
+2020-2021,13,Fiorentina,38,9,13,16,47,59,-12,40,1.05,44.9,61.5,-16.6,-0.44,105,Dušan Vlahović - 21,Bartłomiej Drągowski,
+2020-2021,14,Udinese,38,10,10,18,42,58,-16,40,1.05,45.7,52.6,-6.9,-0.18,158,Rodrigo De Paul - 9,Juan Musso,
+2020-2021,15,Spezia,38,9,12,17,52,72,-20,39,1.03,46.5,65.1,-18.7,-0.49,105,M'Bala Nzola - 11,Ivan Provedel,
+2020-2021,16,Cagliari,38,9,10,19,43,59,-16,37,0.97,47.1,61.7,-14.6,-0.38,105,João Pedro - 16,Alessio Cragno,
+2020-2021,17,Torino,38,7,16,15,50,69,-19,37,0.97,50.0,62.0,-11.9,-0.31,105,Andrea Belotti - 13,Salvatore Sirigu,
+2020-2021,18,Benevento,38,7,12,19,40,75,-35,33,0.87,40.6,64.3,-23.6,-0.62,158,Gianluca Lapadula - 8,Lorenzo Montipò,Relegated
+2020-2021,19,Crotone,38,6,5,27,45,92,-47,23,0.61,40.4,70.8,-30.5,-0.8,53,Simeon Nwankwo - 20,Alex Cordaz,Relegated
+2020-2021,20,Parma,38,3,11,24,39,83,-44,20,0.53,42.5,61.0,-18.5,-0.49,158,"Juraj Kucka, Hernani - 7",Luigi Sepe,Relegated
+2021-2022,1,Milan,38,26,8,4,69,31,38,86,2.26,59.7,35.9,23.8,0.63,44015,"Olivier Giroud, Rafael Leão - 11",Mike Maignan,→ Champions League via league finish
+2021-2022,2,Inter,38,25,9,4,84,32,52,84,2.21,81.6,39.1,42.5,1.12,44473,Lautaro Martínez - 21,Samir Handanović,→ Champions League via league finish
+2021-2022,3,Napoli,38,24,7,7,74,31,43,79,2.08,57.8,32.5,25.3,0.67,28119,Victor Osimhen - 14,David Ospina,→ Champions League via league finish
+2021-2022,4,Juventus,38,20,10,8,57,37,20,70,1.84,51.4,38.1,13.4,0.35,22621,Paulo Dybala - 10,Wojciech Szczęsny,→ Champions League via league finish
+2021-2022,5,Lazio,38,18,10,10,77,58,19,64,1.68,55.3,47.7,7.6,0.2,23263,Ciro Immobile - 27,Thomas Strakosha,→ Europa League via league finish
+2021-2022,6,Roma,38,18,9,11,59,43,16,63,1.66,65.1,38.4,26.8,0.7,41929,Tammy Abraham - 17,Rui Patrício,→ Europa League via league finish
+2021-2022,7,Fiorentina,38,19,5,14,59,51,8,62,1.63,60.0,40.6,19.4,0.51,21107,Dušan Vlahović - 17,Pietro Terracciano,→ Europa Conference League via league finish
+2021-2022,8,Atalanta,38,16,11,11,65,48,17,59,1.55,62.4,45.3,17.2,0.45,10447,Mario Pašalić - 13,Juan Musso,
+2021-2022,9,Hellas Verona,38,14,11,13,65,59,6,53,1.39,50.4,49.0,1.4,0.04,13894,Giovanni Simeone - 17,Lorenzo Montipò,
+2021-2022,10,Torino,38,13,11,14,46,41,5,50,1.32,48.7,38.9,9.8,0.26,9846,Andrea Belotti - 8,Vanja Milinković-Savić,
+2021-2022,11,Sassuolo,38,13,11,14,64,66,-2,50,1.32,55.7,66.4,-10.7,-0.28,8362,Gianluca Scamacca - 16,Andrea Consigli,
+2021-2022,12,Udinese,38,11,14,13,61,58,3,47,1.24,51.3,52.4,-1.0,-0.03,12144,Gerard Deulofeu - 13,Marco Silvestri,
+2021-2022,13,Bologna,38,12,10,16,44,55,-11,46,1.21,44.9,52.6,-7.7,-0.2,14158,Marko Arnautović - 14,Łukasz Skorupski,
+2021-2022,14,Empoli,38,10,11,17,50,70,-20,41,1.08,44.9,66.0,-21.2,-0.56,6356,Andrea Pinamonti - 13,Guglielmo Vicario,
+2021-2022,15,Sampdoria,38,10,6,22,46,63,-17,36,0.95,36.7,56.1,-19.3,-0.51,9417,Francesco Caputo - 11,Emil Audero,
+2021-2022,16,Spezia,38,10,6,22,41,71,-30,36,0.95,40.1,64.4,-24.3,-0.64,6709,Daniele Verde - 8,Ivan Provedel,
+2021-2022,17,Salernitana,38,7,10,21,33,78,-45,31,0.82,36.5,65.2,-28.7,-0.76,15073,Federico Bonazzoli - 10,Vid Belec,
+2021-2022,18,Cagliari,38,6,12,20,34,68,-34,30,0.79,39.0,61.0,-21.9,-0.58,9718,João Pedro - 13,Alessio Cragno,Relegated
+2021-2022,19,Genoa,38,4,16,18,27,60,-33,28,0.74,37.2,54.1,-16.9,-0.44,12326,Mattia Destro - 9,Salvatore Sirigu,Relegated
+2021-2022,20,Venezia,38,6,9,23,34,69,-35,27,0.71,36.5,71.8,-35.3,-0.93,6648,Thomas Henry - 9,Niki Mäenpää,Relegated
+2022-2023,1,Napoli,38,28,6,4,77,28,49,90,2.37,64.7,31.8,33.0,0.87,46173,Victor Osimhen - 26,Alex Meret,→ Champions League via league finish
+2022-2023,2,Lazio,38,22,8,8,60,30,30,74,1.95,51.1,41.3,9.8,0.26,44141,Ciro Immobile - 12,Ivan Provedel,→ Champions League via league finish
+2022-2023,3,Inter,38,23,3,12,71,42,29,72,1.89,68.0,36.5,31.6,0.83,72630,Lautaro Martínez - 21,André Onana,→ Champions League via league finish
+2022-2023,4,Milan,38,20,10,8,64,43,21,70,1.84,58.8,41.1,17.7,0.47,71880,Rafael Leão - 15,Mike Maignan,→ Champions League via league finish
+2022-2023,5,Atalanta,38,19,7,12,66,48,18,64,1.68,57.7,41.4,16.3,0.43,18241,Ademola Lookman - 13,Juan Musso,→ Europa League via league finish
+2022-2023,6,Roma,38,18,9,11,50,38,12,63,1.66,57.7,32.3,25.4,0.67,62032,Paulo Dybala - 12,Rui Patrício,→ Europa League via league finish
+2022-2023,7,Juventus,38,22,6,10,56,33,23,62,1.63,55.3,41.6,13.7,0.36,37656,Dušan Vlahović - 10,Wojciech Szczęsny,"10-point deduction 1, → Conference League via league finish"
+2022-2023,8,Fiorentina,38,15,11,12,53,43,10,56,1.47,55.0,43.4,11.7,0.31,32200,Arthur Cabral - 8,Pietro Terracciano,
+2022-2023,9,Bologna,38,14,12,12,53,49,4,54,1.42,43.8,48.7,-4.9,-0.13,22314,Riccardo Orsolini - 11,Łukasz Skorupski,
+2022-2023,10,Torino,38,14,11,13,42,41,1,53,1.39,41.8,40.0,1.8,0.05,19464,Antonio Sanabria - 12,Vanja Milinković-Savić,
+2022-2023,11,Monza,38,14,10,14,48,52,-4,52,1.37,45.9,51.3,-5.4,-0.14,12413,"Patrick Ciurria, Carlos Augusto - 6",Michele Di Gregorio,
+2022-2023,12,Udinese,38,11,13,14,47,48,-1,46,1.21,46.9,51.8,-4.9,-0.13,21616,Beto - 10,Marco Silvestri,
+2022-2023,13,Sassuolo,38,12,9,17,47,61,-14,45,1.18,51.6,49.7,1.9,0.05,13011,Domenico Berardi - 12,Andrea Consigli,
+2022-2023,14,Empoli,38,10,13,15,37,49,-12,43,1.13,38.8,58.3,-19.5,-0.51,9808,Nicolò Cambiaghi - 6,Guglielmo Vicario,
+2022-2023,15,Salernitana,38,9,15,14,48,62,-14,42,1.11,36.7,67.1,-30.5,-0.8,20082,Boulaye Dia - 16,Guillermo Ochoa,
+2022-2023,16,Lecce,38,8,12,18,33,46,-13,36,0.95,36.3,42.4,-6.1,-0.16,24654,Gabriel Strefezza - 8,Wladimiro Falcone,
+2022-2023,17,Spezia,38,6,13,19,31,62,-31,31,0.82,41.5,59.5,-18.0,-0.47,9258,M'Bala Nzola - 13,Bartłomiej Drągowski,"Relegated, → Relegation tie-breaker"
+2022-2023,18,Hellas Verona,38,7,10,21,31,59,-28,31,0.82,35.8,49.9,-14.1,-0.37,18752,Simone Verdi - 5,Lorenzo Montipò,→ Relegation tie-breaker
+2022-2023,19,Cremonese,38,5,12,21,36,69,-33,27,0.71,38.7,66.1,-27.4,-0.72,11978,Daniel Ciofani - 8,Marco Carnesecchi,Relegated
+2022-2023,20,Sampdoria,38,3,10,25,24,71,-47,19,0.5,34.1,66.3,-32.2,-0.85,20133,Manolo Gabbiadini - 7,Emil Audero,Relegated
+2023-2024,1,Inter,38,29,7,2,89,22,67,94,2.47,78.2,31.2,47.1,1.24,72838,Lautaro Martínez - 24,Yann Sommer,→ Champions League via league finish
+2023-2024,2,Milan,38,22,9,7,76,49,27,75,1.97,66.2,45.4,20.8,0.55,72000,Olivier Giroud - 15,Mike Maignan,→ Champions League via league finish
+2023-2024,3,Juventus,38,19,14,5,54,31,23,71,1.87,54.6,30.1,24.6,0.65,38142,Dušan Vlahović - 16,Wojciech Szczęsny,→ Champions League via league finish
+2023-2024,4,Atalanta,38,21,6,11,72,42,30,69,1.82,57.8,41.1,16.7,0.44,14725,"Gianluca Scamacca, Teun Koopmeiners - 12",Marco Carnesecchi,→ Champions League via league finish
+2023-2024,5,Bologna,38,18,14,6,54,32,22,68,1.79,47.9,37.1,10.9,0.29,25914,Joshua Zirkzee - 11,Łukasz Skorupski,→ Champions League via league finish
+2023-2024,6,Roma,38,18,9,11,65,46,19,63,1.66,51.4,41.8,9.6,0.25,62924,"Romelu Lukaku, Paulo Dybala - 13",Rui Patrício,→ Europa League via league finish
+2023-2024,7,Lazio,38,18,7,13,49,39,10,61,1.61,46.5,42.0,4.5,0.12,42689,Ciro Immobile - 7,Ivan Provedel,→ Europa League via league finish
+2023-2024,8,Fiorentina,38,17,9,12,61,46,15,60,1.58,51.7,48.2,3.6,0.09,29941,Nicolás González - 12,Pietro Terracciano,→ Conference League via league finish
+2023-2024,9,Torino,38,13,14,11,36,36,0,53,1.39,37.7,37.4,0.3,0.01,22753,Duván Zapata - 12,Vanja Milinković-Savić,
+2023-2024,10,Napoli,38,13,14,11,55,48,7,53,1.39,61.4,38.4,23.0,0.61,45622,Victor Osimhen - 15,Alex Meret,
+2023-2024,11,Genoa,38,12,13,13,45,45,0,49,1.29,35.7,42.8,-7.1,-0.19,29609,Albert Guðmundsson - 14,Josep Martinez,
+2023-2024,12,Monza,38,11,12,15,39,51,-12,45,1.18,39.5,56.3,-16.8,-0.44,12172,Andrea Colpani - 8,Michele Di Gregorio,
+2023-2024,13,Hellas Verona,38,9,11,18,38,51,-13,38,1.0,38.0,48.7,-10.7,-0.28,21996,Cyril Ngonge - 6,Lorenzo Montipò,
+2023-2024,14,Lecce,38,8,14,16,32,54,-22,38,1.0,43.1,53.3,-10.2,-0.27,26642,Nikola Krstović - 7,Wladimiro Falcone,
+2023-2024,15,Udinese,38,6,19,13,37,53,-16,37,0.97,39.1,49.1,-10.0,-0.26,21537,Lorenzo Lucca - 8,Maduka Okoye,
+2023-2024,16,Cagliari,38,8,12,18,42,68,-26,36,0.95,42.9,54.5,-11.6,-0.3,16168,Nicolas Viola - 5,Simone Scuffet,
+2023-2024,17,Empoli,38,9,9,20,29,54,-25,36,0.95,36.2,52.9,-16.7,-0.44,11092,M'Baye Niang - 6,Elia Caprile,
+2023-2024,18,Frosinone,38,8,11,19,44,69,-25,35,0.92,45.8,57.7,-12.0,-0.32,15824,Matìas Soulé - 11,Stefano Turati,Relegated
+2023-2024,19,Sassuolo,38,7,9,22,43,75,-32,30,0.79,39.8,61.6,-21.8,-0.57,13905,Andrea Pinamonti - 11,Andrea Consigli,Relegated
+2023-2024,20,Salernitana,38,2,11,25,32,81,-49,17,0.45,30.3,74.4,-44.1,-1.16,18787,Antonio Candreva - 6,Guillermo Ochoa,Relegated
+2024-2025,1,Napoli,38,24,10,4,59,27,32,82,2.16,52.9,29.6,23.3,0.61,50909,Romelu Lukaku - 14,Alex Meret,→ Champions League via league finish
+2024-2025,2,Inter,38,24,9,5,79,35,44,81,2.13,66.9,36.4,30.5,0.8,70126,Marcus Thuram - 14,Yann Sommer,→ Champions League via league finish
+2024-2025,3,Atalanta,38,22,8,8,78,37,41,74,1.95,65.0,38.6,26.4,0.69,22675,Mateo Retegui - 25,Marco Carnesecchi,→ Champions League via league finish
+2024-2025,4,Juventus,38,18,16,4,58,35,23,70,1.84,51.0,34.0,16.9,0.45,40275,Dušan Vlahović - 10,Michele Di Gregorio,→ Champions League via league finish
+2024-2025,5,Roma,38,20,9,9,56,35,21,69,1.82,53.0,40.9,12.1,0.32,61895,Artem Dovbyk - 12,Mile Svilar,→ Europa League via league finish
+2024-2025,6,Fiorentina,38,19,8,11,60,41,19,65,1.71,48.9,42.8,6.1,0.16,20358,Moise Kean - 19,David de Gea,→ Conference League via league finish
+2024-2025,7,Lazio,38,18,11,9,61,49,12,65,1.71,57.2,37.7,19.5,0.51,41161,"Pedro, Valentín Castellanos - 10",Ivan Provedel,
+2024-2025,8,Milan,38,18,9,11,61,43,18,63,1.66,63.7,41.3,22.4,0.59,71523,Christian Pulisic - 11,Mike Maignan,
+2024-2025,9,Bologna,38,16,14,8,57,47,10,62,1.63,49.3,36.7,12.6,0.33,27772,Riccardo Orsolini - 15,Łukasz Skorupski,→ Europa League via cup win
+2024-2025,10,Como,38,13,10,15,49,52,-3,49,1.29,45.4,43.0,2.4,0.06,10604,Assane Diao - 8,Jean Butez,
+2024-2025,11,Torino,38,10,14,14,39,45,-6,44,1.16,34.6,50.4,-15.8,-0.42,23327,Che Adams - 9,Vanja Milinković-Savić,
+2024-2025,12,Udinese,38,12,8,18,41,56,-15,44,1.16,38.2,52.6,-14.4,-0.38,21098,Lorenzo Lucca - 12,Maduka Okoye,
+2024-2025,13,Genoa,38,10,13,15,37,49,-12,43,1.13,37.2,47.2,-10.0,-0.26,31248,Andrea Pinamonti - 10,Nicola Leali,
+2024-2025,14,Hellas Verona,38,10,7,21,34,66,-32,37,0.97,33.8,53.4,-19.6,-0.51,25391,Casper Tengstedt - 6,Lorenzo Montipò,
+2024-2025,15,Cagliari,38,9,9,20,40,56,-16,36,0.95,42.7,55.3,-12.6,-0.33,16071,Roberto Piccoli - 10,Elia Caprile,
+2024-2025,16,Parma,38,7,15,16,44,58,-14,36,0.95,43.1,56.4,-13.3,-0.35,19236,Ange-Yoan Bonny - 6,Zion Suzuki,
+2024-2025,17,Lecce,38,8,10,20,27,58,-31,34,0.89,34.6,57.1,-22.5,-0.59,25980,Nikola Krstović - 11,Wladimiro Falcone,
+2024-2025,18,Empoli,38,6,13,19,33,59,-26,31,0.82,32.5,50.1,-17.6,-0.46,10648,Sebastiano Esposito - 8,Devis Vásquez,Relegated
+2024-2025,19,Venezia,38,5,14,19,32,56,-24,29,0.76,35.8,57.5,-21.7,-0.57,10415,Joel Pohjanpalo - 6,Filip Stankovic,Relegated
+2024-2025,20,Monza,38,3,9,26,28,69,-41,18,0.47,29.9,54.7,-24.8,-0.65,11271,Dany Mota - 5,Stefano Turati,Relegated

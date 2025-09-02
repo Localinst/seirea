@@ -1,0 +1,21 @@
+﻿Rk,Squad,MP,W,D,L,GF,GA,GD,Pts,Pts/MP,xG,xGA,xGD,xGD/90,Attendance,Top Team Scorer,Goalkeeper,Notes
+1,Napoli,38,24,10,4,59,27,32,82,2.16,52.9,29.6,23.3,0.61,50909,Romelu Lukaku - 14,Alex Meret,→ Champions League via league finish
+2,Inter,38,24,9,5,79,35,44,81,2.13,66.9,36.4,30.5,0.8,70126,Marcus Thuram - 14,Yann Sommer,→ Champions League via league finish
+3,Atalanta,38,22,8,8,78,37,41,74,1.95,65.0,38.6,26.4,0.69,22675,Mateo Retegui - 25,Marco Carnesecchi,→ Champions League via league finish
+4,Juventus,38,18,16,4,58,35,23,70,1.84,51.0,34.0,16.9,0.45,40275,Dušan Vlahović - 10,Michele Di Gregorio,→ Champions League via league finish
+5,Roma,38,20,9,9,56,35,21,69,1.82,53.0,40.9,12.1,0.32,61895,Artem Dovbyk - 12,Mile Svilar,→ Europa League via league finish
+6,Fiorentina,38,19,8,11,60,41,19,65,1.71,48.9,42.8,6.1,0.16,20358,Moise Kean - 19,David de Gea,→ Conference League via league finish
+7,Lazio,38,18,11,9,61,49,12,65,1.71,57.2,37.7,19.5,0.51,41161,"Pedro, Valentín Castellanos - 10",Ivan Provedel,
+8,Milan,38,18,9,11,61,43,18,63,1.66,63.7,41.3,22.4,0.59,71523,Christian Pulisic - 11,Mike Maignan,
+9,Bologna,38,16,14,8,57,47,10,62,1.63,49.3,36.7,12.6,0.33,27772,Riccardo Orsolini - 15,Łukasz Skorupski,→ Europa League via cup win
+10,Como,38,13,10,15,49,52,-3,49,1.29,45.4,43.0,2.4,0.06,10604,Assane Diao - 8,Jean Butez,
+11,Torino,38,10,14,14,39,45,-6,44,1.16,34.6,50.4,-15.8,-0.42,23327,Che Adams - 9,Vanja Milinković-Savić,
+12,Udinese,38,12,8,18,41,56,-15,44,1.16,38.2,52.6,-14.4,-0.38,21098,Lorenzo Lucca - 12,Maduka Okoye,
+13,Genoa,38,10,13,15,37,49,-12,43,1.13,37.2,47.2,-10.0,-0.26,31248,Andrea Pinamonti - 10,Nicola Leali,
+14,Hellas Verona,38,10,7,21,34,66,-32,37,0.97,33.8,53.4,-19.6,-0.51,25391,Casper Tengstedt - 6,Lorenzo Montipò,
+15,Cagliari,38,9,9,20,40,56,-16,36,0.95,42.7,55.3,-12.6,-0.33,16071,Roberto Piccoli - 10,Elia Caprile,
+16,Parma,38,7,15,16,44,58,-14,36,0.95,43.1,56.4,-13.3,-0.35,19236,Ange-Yoan Bonny - 6,Zion Suzuki,
+17,Lecce,38,8,10,20,27,58,-31,34,0.89,34.6,57.1,-22.5,-0.59,25980,Nikola Krstović - 11,Wladimiro Falcone,
+18,Empoli,38,6,13,19,33,59,-26,31,0.82,32.5,50.1,-17.6,-0.46,10648,Sebastiano Esposito - 8,Devis Vásquez,Relegated
+19,Venezia,38,5,14,19,32,56,-24,29,0.76,35.8,57.5,-21.7,-0.57,10415,Joel Pohjanpalo - 6,Filip Stankovic,Relegated
+20,Monza,38,3,9,26,28,69,-41,18,0.47,29.9,54.7,-24.8,-0.65,11271,Dany Mota - 5,Stefano Turati,Relegated
