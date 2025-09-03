@@ -1,0 +1,33 @@
+﻿Unnamed: 0_level_0,Unnamed: 1_level_0,Unnamed: 2_level_0,Unnamed: 3_level_0,Unnamed: 4_level_0,Playing Time,Playing Time,Playing Time,Performance,Performance,Performance,Performance,Performance,Performance,Performance,Performance,Per 90 Minutes,Per 90 Minutes,Per 90 Minutes,Per 90 Minutes,Per 90 Minutes,Unnamed: 21_level_0
+Player,Nation,Pos,Age,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,Gls,Ast,G+A,G-PK,G+A-PK,Matches
+Sébastien Frey,fr FRA,GK,31.0,38,38.0,3420,38.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,Matches
+Rodrigo Palacio,ar ARG,"FW,MF",29.0,32,32.0,2756,30.6,19.0,5.0,24.0,16.0,3.0,4.0,6.0,1.0,0.62,0.16,0.78,0.52,0.69,Matches
+Marco Rossi,it ITA,MF,33.0,30,30.0,2547,28.3,4.0,2.0,6.0,4.0,0.0,0.0,5.0,1.0,0.14,0.07,0.21,0.14,0.21,Matches
+Giandomenico Mesto,it ITA,"DF,MF",29.0,31,29.0,2621,29.1,1.0,2.0,3.0,1.0,0.0,0.0,9.0,0.0,0.03,0.07,0.1,0.03,0.1,Matches
+Andreas Granqvist,se SWE,"DF,MF",26.0,28,26.0,2343,26.0,1.0,0.0,1.0,1.0,0.0,0.0,3.0,0.0,0.04,0.0,0.04,0.04,0.04,Matches
+Kakha Kaladze,ge GEO,"DF,MF",33.0,27,26.0,2253,25.0,0.0,0.0,0.0,0.0,0.0,0.0,11.0,2.0,0.0,0.0,0.0,0.0,0.0,Matches
+Emiliano Moretti,it ITA,DF,30.0,27,26.0,2240,24.9,1.0,0.0,1.0,1.0,0.0,0.0,10.0,1.0,0.04,0.0,0.04,0.04,0.04,Matches
+Miguel Veloso,pt POR,MF,25.0,29,25.0,2119,23.5,2.0,0.0,2.0,2.0,0.0,0.0,3.0,0.0,0.08,0.0,0.08,0.08,0.08,Matches
+Juraj Kucka,sk SVK,MF,24.0,26,20.0,1715,19.1,2.0,2.0,4.0,2.0,0.0,0.0,10.0,1.0,0.1,0.1,0.21,0.1,0.21,Matches
+Davide Biondini,it ITA,MF,28.0,20,19.0,1716,19.1,0.0,0.0,0.0,0.0,0.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,Matches
+Boško Janković,rs SRB,MF,27.0,30,18.0,1719,19.1,6.0,2.0,8.0,6.0,0.0,0.0,7.0,1.0,0.31,0.1,0.42,0.31,0.42,Matches
+Kévin Constant,gn GUI,"DF,MF",24.0,21,17.0,1341,14.9,1.0,1.0,2.0,1.0,0.0,0.0,4.0,0.0,0.07,0.07,0.13,0.07,0.13,Matches
+Giuseppe Sculli,it ITA,"FW,MF",30.0,17,16.0,1232,13.7,3.0,3.0,6.0,3.0,0.0,0.0,3.0,0.0,0.22,0.22,0.44,0.22,0.44,Matches
+Alberto Gilardino,it ITA,FW,29.0,14,14.0,1260,14.0,4.0,4.0,8.0,2.0,2.0,2.0,3.0,0.0,0.29,0.29,0.57,0.14,0.43,Matches
+Dario Dainelli,it ITA,DF,32.0,13,12.0,1093,12.1,0.0,0.0,0.0,0.0,0.0,0.0,3.0,1.0,0.0,0.0,0.0,0.0,0.0,Matches
+Alexander Merkel,kz KAZ,MF,19.0,13,10.0,882,9.8,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,Matches
+Fernando Belluschi,ar ARG,MF,27.0,14,9.0,782,8.7,1.0,1.0,2.0,1.0,0.0,0.0,0.0,1.0,0.12,0.12,0.23,0.12,0.23,Matches
+Luca Antonelli,it ITA,"DF,MF",24.0,11,8.0,677,7.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,Matches
+Andrea Caracciolo,it ITA,FW,29.0,12,8.0,579,6.4,1.0,1.0,2.0,1.0,0.0,0.0,1.0,0.0,0.16,0.16,0.31,0.16,0.31,Matches
+Roger Carvalho,br BRA,DF,24.0,9,6.0,634,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Matches
+Felipe Seymour,cl CHI,MF,24.0,12,6.0,568,6.3,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,Matches
+Cesare Bovo,it ITA,DF,28.0,8,5.0,550,6.1,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,Matches
+Cristóbal Jorquera,cl CHI,"FW,MF",22.0,22,4.0,779,8.7,2.0,3.0,5.0,2.0,0.0,0.0,1.0,0.0,0.23,0.35,0.58,0.23,0.58,Matches
+Lucas Pratto,ar ARG,FW,23.0,14,4.0,656,7.3,1.0,2.0,3.0,1.0,0.0,0.0,2.0,0.0,0.14,0.27,0.41,0.14,0.41,Matches
+Valter Birsa,si SVN,"FW,MF",24.0,9,4.0,296,3.3,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,Matches
+Zé Eduardo,br BRA,FW,23.0,9,3.0,281,3.1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,Matches
+Masahudu Alhassan,gh GHA,"DF,MF",18.0,4,2.0,113,1.3,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.8,0.8,0.0,0.8,Matches
+Mario Sampirisi,it ITA,"DF,MF",18.0,4,1.0,111,1.2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,Matches
+Alberto Marchiori,it ITA,DF,18.0,1,0.0,33,0.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Matches
+Squad Total,,,28.3,38,418.0,3420,38.0,49.0,29.0,78.0,44.0,5.0,6.0,95.0,11.0,1.29,0.76,2.05,1.16,1.92,
+Opponent Total,,,27.9,38,,3420,38.0,,,,,,,,,,,,,,
