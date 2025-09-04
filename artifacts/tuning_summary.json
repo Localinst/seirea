@@ -1,0 +1,14 @@
+{
+  "lightgbm_best": {
+    "num_leaves": 31,
+    "n_estimators": 100,
+    "min_child_samples": 10,
+    "learning_rate": 0.01
+  },
+  "xgboost_best": {
+    "subsample": 0.8,
+    "n_estimators": 200,
+    "max_depth": 3,
+    "learning_rate": 0.01
+  }
+}

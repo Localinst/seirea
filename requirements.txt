@@ -1,0 +1,9 @@
+pandas>=1.5
+numpy
+scikit-learn
+joblib
+matplotlib
+seaborn
+lightgbm
+xgboost
+shap

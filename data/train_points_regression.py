@@ -23,6 +23,7 @@ from sklearn.model_selection import KFold
 from sklearn.isotonic import IsotonicRegression
 from scipy.stats import spearmanr, kendalltau
 import joblib
+import argparse
 import seaborn as sns
 import matplotlib.pyplot as plt
 import json
@@ -45,8 +46,8 @@ warnings.filterwarnings('ignore')
 # --- CONFIG ---
 DATA_CSV = "dataset_cleaned_for_ml_with_pts_teamagg.csv"
 TRAIN_START_YEAR = 2010
-TRAIN_UP_TO_YEAR = 2023 # train through this year (inclusive) for final model
-PREDICT_YEAR = 2024
+TRAIN_UP_TO_YEAR = 2022 # train through this year (inclusive) for final model
+PREDICT_YEAR = 2023
 RANDOM_STATE = 42
 ARTIFACTS = "artifacts_regression"
 os.makedirs(ARTIFACTS, exist_ok=True)
@@ -242,12 +243,20 @@ def walk_forward_validation(df, feature_cols, target_col='points_target'):
     return pd.DataFrame(results)
 
 
-def train_final_and_predict(df, feature_cols, target_col='points_target'):
+def train_final_and_predict(df, feature_cols, target_col='points_target', predict_year=None, calibrator_method='isotonic', calib_blend=0.0):
+    """Train final ensemble and predict for a single predict_year.
+
+    If predict_year is None the global PREDICT_YEAR is used.
+    Returns the predictions DataFrame or None.
+    """
+    if predict_year is None:
+        predict_year = PREDICT_YEAR
+
     train_df = df[df['season_year_end'] <= TRAIN_UP_TO_YEAR].copy()
-    predict_df = df[df['season_year_end'] == PREDICT_YEAR].copy()
+    predict_df = df[df['season_year_end'] == predict_year].copy()
 
     if predict_df.empty:
-        print(f"[WARN] No data for predict year {PREDICT_YEAR}. Ensure preseason features provided.")
+        print(f"[WARN] No data for predict year {predict_year}. Ensure preseason features provided.")
 
     X = train_df[feature_cols].copy()
     y = train_df[target_col].astype(float)
@@ -304,18 +313,11 @@ def train_final_and_predict(df, feature_cols, target_col='points_target'):
             preds_x = xgb_cv.predict(Xva_s)
             preds = 0.5 * preds + 0.5 * preds_x
 
-    # va_idx are integer positions returned by KFold.split; assign using those positions
-    oof_preds[va_idx] = preds
+        # assign OOF predictions for this fold (va_idx are positions)
+        oof_preds[va_idx] = preds
 
     # Build calibrator (Platt = logistic regression on predicted score; isotonic optional)
-    # Default to Platt scaling
-    calibrator_method = 'platt'
-    try:
-        # allow user to set method via environment var if desired
-        import os as _os
-        calibrator_method = _os.environ.get('CALIB_METHOD', 'platt')
-    except Exception:
-        calibrator_method = 'platt'
+    # calibrator_method is passed in (CLI) and defaults to 'isotonic'
 
     y_win = train_df['winner_flag'].values
     calibrator = None
@@ -330,10 +332,10 @@ def train_final_and_predict(df, feature_cols, target_col='points_target'):
 
     # --- Compute calibration & accuracy metrics on OOF predictions ---
     try:
-        if calibrator[0] == 'platt':
-            probs_oof = calibrator[1].predict_proba(oof_preds.reshape(-1,1))[:, 1]
-        else:
+        if calibrator[0] == 'isotonic':
             probs_oof = calibrator[1].predict(oof_preds)
+        else:
+            probs_oof = calibrator[1].predict_proba(oof_preds.reshape(-1,1))[:, 1]
 
         metrics = {}
         metrics['oof_brier'] = float(brier_score_loss(y_win, probs_oof))
@@ -407,19 +409,48 @@ def train_final_and_predict(df, feature_cols, target_col='points_target'):
         out['prob_rel'] = (exp / exp.sum())
 
         # calibrated probability of winning via calibrator
-        if calibrator[0] == 'platt':
-            lr = calibrator[1]
-            out['prob_calibrated'] = lr.predict_proba(out['pred_points'].values.reshape(-1,1))[:,1]
-        else:
+        if calibrator[0] == 'isotonic':
             iso = calibrator[1]
             out['prob_calibrated'] = iso.predict(out['pred_points'].values)
+        else:
+            lr = calibrator[1]
+            out['prob_calibrated'] = lr.predict_proba(out['pred_points'].values.reshape(-1,1))[:,1]
 
-        out.to_csv(os.path.join(ARTIFACTS, f'predictions_{PREDICT_YEAR}.csv'), index=False)
+        # Optionally blend isotonic probabilities with the softmax relative probability
+        # to avoid many exact zeros from a step-like isotonic mapping. Blend weight
+        # `calib_blend` is the weight on the calibrated values (0..1); lower values
+        # mix in `prob_rel` which is dense and smooth.
+        try:
+            blend = float(calib_blend)
+        except Exception:
+            blend = 0.0
+        if blend > 0.0 and blend < 1.0:
+            out['prob_calibrated'] = blend * out['prob_calibrated'] + (1.0 - blend) * out['prob_rel']
+
+        # normalized calibrated probability across all teams (relative probability of winning
+        # when you want the calibrated scores to form a distribution). This is optional but
+        # useful for downstream ranking/portfolio decisions.
+        total = out['prob_calibrated'].sum()
+        if total > 0:
+            out['prob_calibrated_rel'] = out['prob_calibrated'] / total
+        else:
+            out['prob_calibrated_rel'] = 0.0
+
+    if out is not None:
+        out.to_csv(os.path.join(ARTIFACTS, f'predictions_{predict_year}.csv'), index=False)
 
     return out
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--predict-years', type=str, default=None,
+                        help='Comma separated list of season end years to predict, e.g. 2023,2025')
+    parser.add_argument('--no-plots', action='store_true', help='Skip heavy plotting (pairplots, large figures)')
+    parser.add_argument('--calibrator', type=str, default='isotonic', choices=['isotonic','platt'], help='Which calibrator to use for mapping points->P(winner)')
+    parser.add_argument('--calib-blend', type=float, default=0.0, help='Blend weight (0..1) between calibrated prob and softmax prob to reduce zeros; 1.0 = calibrated only')
+    args = parser.parse_args()
+
     print('[START] Loading data')
     df = load_and_clean(DATA_CSV)
 
@@ -473,147 +504,162 @@ def main():
     print(wfv.groupby('model').agg({'rmse':'mean','spearman':'mean','kendall':'mean','hit1':'mean'}))
 
     print('[INFO] Training final model and predicting')
-    preds = train_final_and_predict(pre_df, feature_cols)
-    if preds is not None:
-        print(f"[RESULT] Predicted ranking for {PREDICT_YEAR}:")
-        print(preds[['rank_pred','squad','pred_points','prob_rel','prob_calibrated']].to_string(index=False))
-
-        
+    if args.predict_years:
+        years = [int(y.strip()) for y in args.predict_years.split(',') if y.strip()]
     else:
-        print('[WARN] No predictions generated')
+        years = [PREDICT_YEAR]
+
+    generated_any = False
+    for y in years:
+        preds = train_final_and_predict(pre_df, feature_cols, predict_year=y, calibrator_method=args.calibrator, calib_blend=args.calib_blend)
+        if preds is not None:
+            generated_any = True
+            print(f"[RESULT] Predicted ranking for {y}:")
+            # show relative calibrated probability alongside raw calibration
+            display_cols = ['rank_pred','squad','pred_points','prob_rel','prob_calibrated','prob_calibrated_rel']
+            available_display = [c for c in display_cols if c in preds.columns]
+            print(preds[available_display].to_string(index=False))
+        else:
+            print(f"[WARN] No predictions generated for {y}")
+
+    if not generated_any:
+        print('[WARN] No predictions generated for any requested years')
 
     # --- PLOTTING SECTION: generate diagnostics and pairplots for all features ---
-    try:
-        print('[INFO] Generating diagnostic plots')
-        artifacts_dir = ARTIFACTS
-        os.makedirs(artifacts_dir, exist_ok=True)
+    if args.no_plots:
+        print('[INFO] Skipping plotting as --no-plots was provided')
+    else:
+        try:
+            print('[INFO] Generating diagnostic plots')
+            artifacts_dir = ARTIFACTS
+            os.makedirs(artifacts_dir, exist_ok=True)
 
-        df_all = pd.read_csv(DATA_CSV)
-        df_all.columns = df_all.columns.str.strip()
+            df_all = pd.read_csv(DATA_CSV)
+            df_all.columns = df_all.columns.str.strip()
 
-        # requested full column list (as provided by user)
-        all_requested = ['season','squad','winner','# Pl','Age','Poss','MP','Starts','Min','90s','Gls','Ast','G+A','G-PK','PK','PKatt','CrdY','CrdR','G+A-PK','Attendance','Sh','SoT','SoT%','Sh/90','SoT/90','G/Sh','G/SoT','Dist','xG','xGA','xGD','xGD/90','Pts','__season_norm','__squad_norm','roster_size','starters_count','age_mean','age_mean_starters','pct_under23','pct_gk','pct_df','pct_mf','pct_fw','goals_tot','assists_tot','xg_tot','xga_proxy','team_xg_per90','conversion_sh_to_g','progressions_tot','yellow_cards','red_cards','top5_mean_gpa','bottom5_mean_gpa','gap_top5_bottom5_gpa','age_std']
+            # requested full column list (as provided by user)
+            all_requested = ['season','squad','winner','# Pl','Age','Poss','MP','Starts','Min','90s','Gls','Ast','G+A','G-PK','PK','PKatt','CrdY','CrdR','G+A-PK','Attendance','Sh','SoT','SoT%','Sh/90','SoT/90','G/Sh','G/SoT','Dist','xG','xGA','xGD','xGD/90','Pts','__season_norm','__squad_norm','roster_size','starters_count','age_mean','age_mean_starters','pct_under23','pct_gk','pct_df','pct_mf','pct_fw','goals_tot','assists_tot','xg_tot','xga_proxy','team_xg_per90','conversion_sh_to_g','progressions_tot','yellow_cards','red_cards','top5_mean_gpa','bottom5_mean_gpa','gap_top5_bottom5_gpa','age_std']
 
-        available = [c for c in all_requested if c in df_all.columns]
-        if not available:
-            available = list(df_all.columns)
+            available = [c for c in all_requested if c in df_all.columns]
+            if not available:
+                available = list(df_all.columns)
 
-        # prepare dataframe copy and coerce numerics where possible
-        pair_df = df_all[available].copy()
-        for c in pair_df.columns:
-            if c == 'winner' or c == 'season' or c == 'squad' or c == '__season_norm' or c == '__squad_norm':
-                continue
-            pair_df[c] = pd.to_numeric(pair_df[c], errors='coerce')
+            # prepare dataframe copy and coerce numerics where possible
+            pair_df = df_all[available].copy()
+            for c in pair_df.columns:
+                if c == 'winner' or c == 'season' or c == 'squad' or c == '__season_norm' or c == '__squad_norm':
+                    continue
+                pair_df[c] = pd.to_numeric(pair_df[c], errors='coerce')
 
-        # Correlation heatmap on numeric columns
-        num_cols = pair_df.select_dtypes(include=[np.number]).columns.tolist()
-        if num_cols:
-            corr = pair_df[num_cols].corr()
-            plt.figure(figsize=(max(10, len(num_cols)*0.3), max(8, len(num_cols)*0.3)))
-            sns.heatmap(corr, cmap='vlag', center=0, linewidths=.5)
-            plt.title('Correlation matrix (numeric features)')
-            plt.tight_layout()
-            plt.savefig(os.path.join(artifacts_dir, 'correlation_heatmap.png'))
-            plt.close()
-
-        # User-specified play_features pairplot: highlight winners in orange
-        play_features = ['possession_percentile', 'Poss', 'assist_to_goal_ratio', 'penalty_conversion']
-        play_present = [c for c in play_features if c in pair_df.columns]
-        # Create categorical winner flag for plotting if present
-        if 'winner' in pair_df.columns:
-            try:
-                pair_df['is_winner'] = pair_df['winner'].apply(lambda x: 'Winner' if str(x).strip() in ['1', 'True', 'true'] else 'Other')
-            except Exception:
-                pair_df['is_winner'] = pair_df['winner'].apply(lambda x: 'Winner' if x == 1 else 'Other')
-        if len(play_present) >= 1:
-            try:
-                subset_cols = play_present + (['is_winner'] if 'is_winner' in pair_df.columns else [])
-                plot_df = pair_df[subset_cols].dropna()
-                # sample to keep pairplot responsive
-                if len(plot_df) > 500:
-                    plot_df = plot_df.sample(500, random_state=RANDOM_STATE)
-                palette = {'Winner': '#ff7f0e', 'Other': '#1f77b4'}
-                sns.pairplot(plot_df, hue='is_winner' if 'is_winner' in plot_df.columns else None, diag_kind='kde', plot_kws={'s':40,'alpha':0.7}, palette=palette)
-                plt.suptitle('Possession and Play Features Relationships', y=1.02)
-                plt.savefig(os.path.join(artifacts_dir, 'play_features_relationships.png'))
+            # Correlation heatmap on numeric columns
+            num_cols = pair_df.select_dtypes(include=[np.number]).columns.tolist()
+            if num_cols:
+                corr = pair_df[num_cols].corr()
+                plt.figure(figsize=(max(10, len(num_cols)*0.3), max(8, len(num_cols)*0.3)))
+                sns.heatmap(corr, cmap='vlag', center=0, linewidths=.5)
+                plt.title('Correlation matrix (numeric features)')
+                plt.tight_layout()
+                plt.savefig(os.path.join(artifacts_dir, 'correlation_heatmap.png'))
                 plt.close()
-            except Exception:
-                # fallback: simple scatter plots
+
+            # User-specified play_features pairplot: highlight winners in orange
+            play_features = ['possession_percentile', 'Poss', 'assist_to_goal_ratio', 'penalty_conversion']
+            play_present = [c for c in play_features if c in pair_df.columns]
+            # Create categorical winner flag for plotting if present
+            if 'winner' in pair_df.columns:
                 try:
-                    for a in play_present[:3]:
-                        for b in play_present[:3]:
-                            if a == b:
-                                continue
-                            plt.figure(figsize=(6,4))
-                            sns.scatterplot(data=pair_df, x=a, y=b, hue='is_winner' if 'is_winner' in pair_df.columns else None, palette=palette)
-                            plt.tight_layout()
-                            plt.savefig(os.path.join(artifacts_dir, f'play_scatter_{a}_vs_{b}.png'))
-                            plt.close()
+                    pair_df['is_winner'] = pair_df['winner'].apply(lambda x: 'Winner' if str(x).strip() in ['1', 'True', 'true'] else 'Other')
                 except Exception:
-                    pass
-
-        # Pairplots for all numeric features: chunk to avoid massive plots
-        max_pair = 4  # reduce vars per pairplot for speed
-        numeric_all = num_cols.copy()
-        # create/ensure categorical winner flag for plotting
-        if 'is_winner' not in pair_df.columns and 'winner' in pair_df.columns:
-            try:
-                pair_df['is_winner'] = pair_df['winner'].apply(lambda x: 'Winner' if str(x).strip() in ['1', 'True', 'true'] else 'Other')
-            except Exception:
-                pair_df['is_winner'] = pair_df['winner'].apply(lambda x: 'Winner' if x == 1 else 'Other')
-
-        palette = {'Winner': '#ff7f0e', 'Other': '#1f77b4'}
-        max_chunks = 8
-        chunk_idx = 0
-        for i in range(0, len(numeric_all), max_pair):
-            if chunk_idx >= max_chunks:
-                break
-            chunk = numeric_all[i:i+max_pair]
-            if len(chunk) < 2:
-                continue
-            subset_cols = chunk + (['is_winner'] if 'is_winner' in pair_df.columns else [])
-            plot_df = pair_df[subset_cols].dropna()
-            # sample large sets for responsiveness
-            if len(plot_df) > 500:
-                plot_df = plot_df.sample(500, random_state=RANDOM_STATE)
-            try:
-                sns.pairplot(plot_df, hue='is_winner' if 'is_winner' in plot_df.columns else None, diag_kind='kde', plot_kws={'s':30,'alpha':0.6}, palette=palette)
-                plt.suptitle(f'Pairplot chunk {chunk_idx + 1}', y=1.02)
-                plt.savefig(os.path.join(artifacts_dir, f'pairplot_chunk_{chunk_idx + 1}.png'))
-                plt.close()
-            except Exception:
-                # fallback: scatter_matrix
+                    pair_df['is_winner'] = pair_df['winner'].apply(lambda x: 'Winner' if x == 1 else 'Other')
+            if len(play_present) >= 1:
                 try:
-                    pd.plotting.scatter_matrix(plot_df[chunk].dropna(), diagonal='kde', figsize=(8,8))
-                    plt.suptitle(f'Scatter matrix chunk {chunk_idx + 1}', y=1.02)
-                    plt.savefig(os.path.join(artifacts_dir, f'scatter_matrix_chunk_{chunk_idx + 1}.png'))
+                    subset_cols = play_present + (['is_winner'] if 'is_winner' in pair_df.columns else [])
+                    plot_df = pair_df[subset_cols].dropna()
+                    # sample to keep pairplot responsive
+                    if len(plot_df) > 500:
+                        plot_df = plot_df.sample(500, random_state=RANDOM_STATE)
+                    palette = {'Winner': '#ff7f0e', 'Other': '#1f77b4'}
+                    sns.pairplot(plot_df, hue='is_winner' if 'is_winner' in plot_df.columns else None, diag_kind='kde', plot_kws={'s':40,'alpha':0.7}, palette=palette)
+                    plt.suptitle('Possession and Play Features Relationships', y=1.02)
+                    plt.savefig(os.path.join(artifacts_dir, 'play_features_relationships.png'))
                     plt.close()
                 except Exception:
-                    pass
-            chunk_idx += 1
+                    # fallback: simple scatter plots
+                    try:
+                        for a in play_present[:3]:
+                            for b in play_present[:3]:
+                                if a == b:
+                                    continue
+                                plt.figure(figsize=(6,4))
+                                sns.scatterplot(data=pair_df, x=a, y=b, hue='is_winner' if 'is_winner' in pair_df.columns else None, palette=palette)
+                                plt.tight_layout()
+                                plt.savefig(os.path.join(artifacts_dir, f'play_scatter_{a}_vs_{b}.png'))
+                                plt.close()
+                    except Exception:
+                        pass
 
-        # Histograms and boxplots for numeric features
-        for c in num_cols:
-            try:
-                plt.figure(figsize=(6,4))
-                sns.histplot(pair_df[c].dropna(), kde=True)
-                plt.title(f'Histogram {c}')
-                plt.tight_layout()
-                plt.savefig(os.path.join(artifacts_dir, f'hist_{c}.png'))
-                plt.close()
+            # Pairplots for all numeric features: chunk to avoid massive plots
+            max_pair = 4  # reduce vars per pairplot for speed
+            numeric_all = num_cols.copy()
+            # create/ensure categorical winner flag for plotting
+            if 'is_winner' not in pair_df.columns and 'winner' in pair_df.columns:
+                try:
+                    pair_df['is_winner'] = pair_df['winner'].apply(lambda x: 'Winner' if str(x).strip() in ['1', 'True', 'true'] else 'Other')
+                except Exception:
+                    pair_df['is_winner'] = pair_df['winner'].apply(lambda x: 'Winner' if x == 1 else 'Other')
 
-                plt.figure(figsize=(6,4))
-                sns.boxplot(x=pair_df[c].dropna())
-                plt.title(f'Boxplot {c}')
-                plt.tight_layout()
-                plt.savefig(os.path.join(artifacts_dir, f'box_{c}.png'))
-                plt.close()
-            except Exception:
-                continue
+            palette = {'Winner': '#ff7f0e', 'Other': '#1f77b4'}
+            max_chunks = 8
+            chunk_idx = 0
+            for i in range(0, len(numeric_all), max_pair):
+                if chunk_idx >= max_chunks:
+                    break
+                chunk = numeric_all[i:i+max_pair]
+                if len(chunk) < 2:
+                    continue
+                subset_cols = chunk + (['is_winner'] if 'is_winner' in pair_df.columns else [])
+                plot_df = pair_df[subset_cols].dropna()
+                # sample large sets for responsiveness
+                if len(plot_df) > 500:
+                    plot_df = plot_df.sample(500, random_state=RANDOM_STATE)
+                try:
+                    sns.pairplot(plot_df, hue='is_winner' if 'is_winner' in plot_df.columns else None, diag_kind='kde', plot_kws={'s':30,'alpha':0.6}, palette=palette)
+                    plt.suptitle(f'Pairplot chunk {chunk_idx + 1}', y=1.02)
+                    plt.savefig(os.path.join(artifacts_dir, f'pairplot_chunk_{chunk_idx + 1}.png'))
+                    plt.close()
+                except Exception:
+                    # fallback: scatter_matrix
+                    try:
+                        pd.plotting.scatter_matrix(plot_df[chunk].dropna(), diagonal='kde', figsize=(8,8))
+                        plt.suptitle(f'Scatter matrix chunk {chunk_idx + 1}', y=1.02)
+                        plt.savefig(os.path.join(artifacts_dir, f'scatter_matrix_chunk_{chunk_idx + 1}.png'))
+                        plt.close()
+                    except Exception:
+                        pass
+                chunk_idx += 1
 
-        print('[INFO] Plots saved to', artifacts_dir)
-    except Exception as e:
-        print('[WARN] Plotting failed:', e)
+            # Histograms and boxplots for numeric features
+            for c in num_cols:
+                try:
+                    plt.figure(figsize=(6,4))
+                    sns.histplot(pair_df[c].dropna(), kde=True)
+                    plt.title(f'Histogram {c}')
+                    plt.tight_layout()
+                    plt.savefig(os.path.join(artifacts_dir, f'hist_{c}.png'))
+                    plt.close()
+
+                    plt.figure(figsize=(6,4))
+                    sns.boxplot(x=pair_df[c].dropna())
+                    plt.title(f'Boxplot {c}')
+                    plt.tight_layout()
+                    plt.savefig(os.path.join(artifacts_dir, f'box_{c}.png'))
+                    plt.close()
+                except Exception:
+                    continue
+
+            print('[INFO] Plots saved to', artifacts_dir)
+        except Exception as e:
+            print('[WARN] Plotting failed:', e)
 
 
 if __name__ == '__main__':
