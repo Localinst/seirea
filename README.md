@@ -1,5 +1,5 @@
 
-
+> python "C:\Users\ReadyToUse\Desktop\Data\serie a\tools\predict_with_bookies.py" --home Lazio --away Verona --date 2025-09-30
 Colonne e significato (italiano)
 ---------------------------------
 - season: stagione (es. "2010-2011").

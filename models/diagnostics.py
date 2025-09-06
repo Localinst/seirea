@@ -57,7 +57,13 @@ def main():
         sub = df[df['source_file']==src]
         if sub.empty:
             continue
-        y = sub['Result']
+        # target historically called 'Result' in some exports; fall back to 'FTR'
+        if 'Result' in sub.columns:
+            y = sub['Result']
+        elif 'FTR' in sub.columns:
+            y = sub['FTR']
+        else:
+            raise RuntimeError('No target column found in features.csv: expected "Result" or "FTR"')
         # baseline features
         base_cols = ['home_recent_pts_mean','home_recent_gd_mean','home_recent_matches','away_recent_pts_mean','away_recent_gd_mean','away_recent_matches']
         X_base = sub[[c for c in base_cols if c in sub.columns]].fillna(0.0)

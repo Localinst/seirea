@@ -1,0 +1,30 @@
+{
+  "stats": {
+    "n_train": 2460,
+    "n_test": 580,
+    "test_class_counts": {
+      "0": 227,
+      "1": 171,
+      "2": 182
+    },
+    "train_class_counts": {
+      "0": 1035,
+      "1": 620,
+      "2": 805
+    }
+  },
+  "metrics": {
+    "oof_log_loss": 0.38166717043006304,
+    "test_log_loss": 0.15225346180859262,
+    "oof_acc": 0.8447154471544716,
+    "test_acc": 1.0
+  },
+  "per_class": {
+    "oof_log_loss_class_0": 0.3194742845260407,
+    "test_log_loss_class_0": 0.007139022527584726,
+    "oof_log_loss_class_1": 0.4972517669228172,
+    "test_log_loss_class_1": 0.4972517669228172,
+    "oof_log_loss_class_2": 0.37260777550479,
+    "test_log_loss_class_2": 0.009101085667144059
+  }
+}

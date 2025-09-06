@@ -1,0 +1,127 @@
+{
+  "obvious_postmatch_cols": [
+    "FTHG",
+    "FTAG",
+    "FTR",
+    "HS",
+    "AS",
+    "HST",
+    "AST",
+    "HF",
+    "AF",
+    "HC",
+    "AC",
+    "HY",
+    "AY",
+    "HR",
+    "AR"
+  ],
+  "season_agg_analysis": {
+    "per_column": {
+      "home_season_pts": {
+        "matches_equal_before": 3040,
+        "matches_equal_after": 0,
+        "mismatch": 0,
+        "rows_checked": 3040
+      },
+      "home_season_wins": {
+        "matches_equal_before": 3040,
+        "matches_equal_after": 0,
+        "mismatch": 0,
+        "rows_checked": 3040
+      },
+      "home_season_draws": {
+        "matches_equal_before": 3040,
+        "matches_equal_after": 0,
+        "mismatch": 0,
+        "rows_checked": 3040
+      },
+      "home_season_losses": {
+        "matches_equal_before": 3040,
+        "matches_equal_after": 0,
+        "mismatch": 0,
+        "rows_checked": 3040
+      },
+      "home_season_gf": {
+        "matches_equal_before": 3040,
+        "matches_equal_after": 0,
+        "mismatch": 0,
+        "rows_checked": 3040
+      },
+      "home_season_ga": {
+        "matches_equal_before": 3040,
+        "matches_equal_after": 0,
+        "mismatch": 0,
+        "rows_checked": 3040
+      },
+      "home_season_matches": {
+        "matches_equal_before": 3040,
+        "matches_equal_after": 0,
+        "mismatch": 0,
+        "rows_checked": 3040
+      },
+      "away_season_pts": {
+        "matches_equal_before": 3040,
+        "matches_equal_after": 0,
+        "mismatch": 0,
+        "rows_checked": 3040
+      },
+      "away_season_wins": {
+        "matches_equal_before": 3040,
+        "matches_equal_after": 0,
+        "mismatch": 0,
+        "rows_checked": 3040
+      },
+      "away_season_draws": {
+        "matches_equal_before": 3040,
+        "matches_equal_after": 0,
+        "mismatch": 0,
+        "rows_checked": 3040
+      },
+      "away_season_losses": {
+        "matches_equal_before": 3040,
+        "matches_equal_after": 0,
+        "mismatch": 0,
+        "rows_checked": 3040
+      },
+      "away_season_gf": {
+        "matches_equal_before": 3040,
+        "matches_equal_after": 0,
+        "mismatch": 0,
+        "rows_checked": 3040
+      },
+      "away_season_ga": {
+        "matches_equal_before": 3040,
+        "matches_equal_after": 0,
+        "mismatch": 0,
+        "rows_checked": 3040
+      },
+      "away_season_matches": {
+        "matches_equal_before": 3040,
+        "matches_equal_after": 0,
+        "mismatch": 0,
+        "rows_checked": 3040
+      }
+    },
+    "summary": {
+      "total_rows": 3040,
+      "likely_leak_columns": [],
+      "likely_pre_match_columns": [
+        "home_season_pts",
+        "home_season_wins",
+        "home_season_draws",
+        "home_season_losses",
+        "home_season_gf",
+        "home_season_ga",
+        "home_season_matches",
+        "away_season_pts",
+        "away_season_wins",
+        "away_season_draws",
+        "away_season_losses",
+        "away_season_gf",
+        "away_season_ga",
+        "away_season_matches"
+      ]
+    }
+  }
+}

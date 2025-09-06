@@ -120,9 +120,21 @@ def main():
     train, test = time_split(df)
     feat_cols = select_features(train)
     X_train = train[feat_cols].fillna(0.0)
-    y_train = train['Result'].map({'H':0,'D':1,'A':2})
+    # target historically called 'Result'; fall back to 'FTR' if missing
+    if 'Result' in train.columns:
+        y_train = train['Result'].map({'H':0,'D':1,'A':2})
+    elif 'FTR' in train.columns:
+        y_train = train['FTR'].map({'H':0,'D':1,'A':2})
+    else:
+        raise RuntimeError('No target column found in features.csv: expected "Result" or "FTR"')
+
     X_test = test[feat_cols].fillna(0.0)
-    y_test = test['Result'].map({'H':0,'D':1,'A':2})
+    if 'Result' in test.columns:
+        y_test = test['Result'].map({'H':0,'D':1,'A':2})
+    elif 'FTR' in test.columns:
+        y_test = test['FTR'].map({'H':0,'D':1,'A':2})
+    else:
+        raise RuntimeError('No target column found in features.csv: expected "Result" or "FTR"')
 
     tscv = TimeSeriesSplit(n_splits=4)
 

@@ -1,0 +1,32 @@
+{
+  "sum_stats": {
+    "min_sum": 0.9999999999999999,
+    "max_sum": 1.0000000000000002,
+    "mean_sum": 1.0
+  },
+  "confusion_matrix": [
+    [
+      227,
+      0,
+      0
+    ],
+    [
+      0,
+      171,
+      0
+    ],
+    [
+      0,
+      0,
+      182
+    ]
+  ],
+  "accuracy": 1.0,
+  "log_loss": 0.15225346180859262,
+  "per_class": {
+    "test_log_loss_class_0": 0.007139022527584726,
+    "test_log_loss_class_1": 0.4972517669228172,
+    "test_log_loss_class_2": 0.009101085667144059
+  },
+  "n_test": 580
+}

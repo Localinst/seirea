@@ -93,7 +93,13 @@ def main():
     
     df = pd.read_csv(FEATS, parse_dates=['Date'])
     df = df.sort_values('Date').reset_index(drop=True)
-    df['y'] = df['Result'].map({'H': 0, 'D': 1, 'A': 2})
+    # target column historically called 'Result'; fall back to 'FTR'
+    if 'Result' in df.columns:
+        df['y'] = df['Result'].map({'H': 0, 'D': 1, 'A': 2})
+    elif 'FTR' in df.columns:
+        df['y'] = df['FTR'].map({'H': 0, 'D': 1, 'A': 2})
+    else:
+        raise RuntimeError('No target column found in features.csv: expected "Result" or "FTR"')
 
     # Load models
     models = {}

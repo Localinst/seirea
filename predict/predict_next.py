@@ -18,6 +18,7 @@ import sys
 import importlib.util
 import math
 import matplotlib.pyplot as plt
+import types
 
 ROOT = os.path.dirname(os.path.dirname(__file__))
 FEATS = os.path.join(ROOT, 'data', 'features.csv')
@@ -98,6 +99,17 @@ def compute_on_the_fly(home, away, date, combined_path, seed_path=None):
             base = os.path.basename(srcfile)
             if base.startswith('season-'):
                 return base.split('-')[1].split('.')[0]
+        except Exception:
+            pass
+        # allow simple mapping for I*.csv files which represent current-season partite files
+        try:
+            base = os.path.basename(srcfile)
+            # small hard-coded mapping; extend if new I*.csv files map to different seasons
+            i_mapping = {
+                'I9.csv': '2025-2026'
+            }
+            if base in i_mapping:
+                return i_mapping[base]
         except Exception:
             pass
         return None
@@ -285,12 +297,14 @@ def main():
     if not mask.any():
         print(f'No matching row found for {args.home} vs {args.away} on {args.date} in {FEATS}. Computing features on-the-fly from historical matches...')
         # compute from combined matches (future match scenario)
-        COMBINED = os.path.join(os.path.dirname(ROOT), 'data', 'combined_matches.csv')
+        # ROOT points at repository root; combined matches live under ROOT/data
+        COMBINED = os.path.join(ROOT, 'data', 'combined_matches.csv')
         try:
             rowd = compute_on_the_fly(args.home, args.away, args.date, COMBINED, seed_path=args.seed_results)
             row = pd.Series(rowd)
         except FileNotFoundError as e:
             print('Cannot compute on-the-fly features:', e)
+            print('Tried combined matches path:', COMBINED)
             print('Possible fixes: generate features.csv including the target match, or provide combined_matches.csv')
             sys.exit(3)
         except Exception as e:
@@ -311,6 +325,27 @@ def main():
         print('Stacked model artifact not found at', stack_path)
         sys.exit(4)
     # Ensure pickled helper classes are importable for unpickling (StackedModel / CalibratedStacked)
+    # Put project ROOT on sys.path and register models.calibrated_stack_wrapper if present so
+    # joblib.load can resolve class names saved under 'models.calibrated_stack_wrapper'
+    if ROOT not in sys.path:
+        sys.path.insert(0, ROOT)
+    try:
+        import models.calibrated_stack_wrapper as _mcs
+    except Exception:
+        # try to load from file and register package/submodule
+        fn = os.path.join(os.path.dirname(__file__), 'models', 'calibrated_stack_wrapper.py')
+        fn2 = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'models', 'calibrated_stack_wrapper.py')
+        fn_use = fn if os.path.exists(fn) else (fn2 if os.path.exists(fn2) else None)
+        if fn_use:
+            spec = importlib.util.spec_from_file_location('models.calibrated_stack_wrapper', fn_use)
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            sys.modules['models.calibrated_stack_wrapper'] = mod
+            if 'models' not in sys.modules:
+                pkg = types.ModuleType('models')
+                sys.modules['models'] = pkg
+            setattr(sys.modules['models'], 'calibrated_stack_wrapper', mod)
+            mod.__package__ = 'models'
     try:
         import models.tune_and_stack as _ts
         try:

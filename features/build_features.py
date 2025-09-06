@@ -120,11 +120,19 @@ def compute_features(df, rolling_n=5, h2h_k=5, elo_k=20, home_adv=100):
             h2h_home_pts_mean = float(sum(pts_home)/len(pts_home))
 
         row = r.to_dict()
+        # Remove raw post-match columns from the output to avoid leakage.
+        # We still use r[...] below to update internal state, but we don't
+        # expose these in the saved features file.
+        postmatch_cols = ['FTHG', 'FTAG', 'FTR', 'HS', 'AS', 'HST', 'AST', 'HF', 'AF', 'HC', 'AC', 'HY', 'AY', 'HR', 'AR']
+        for c in postmatch_cols:
+            row.pop(c, None)
+
         # add team stats prefixed
-        for k,v in home_stats.items():
-            row['home_'+k] = v
-        for k,v in away_stats.items():
-            row['away_'+k] = v
+        for k, v in home_stats.items():
+            row['home_' + k] = v
+        for k, v in away_stats.items():
+            row['away_' + k] = v
+
         # head-to-head features
         row['h2h_home_goals_avg'] = h2h_home_goals_avg
         row['h2h_away_goals_avg'] = h2h_away_goals_avg
@@ -135,8 +143,9 @@ def compute_features(df, rolling_n=5, h2h_k=5, elo_k=20, home_adv=100):
         rows.append(row)
 
         # now update stats with this match outcome (must be inside the loop)
-        ft_h = r['FTHG'] if not pd.isna(r['FTHG']) else 0
-        ft_a = r['FTAG'] if not pd.isna(r['FTAG']) else 0
+        ft_h = r.get('FTHG', 0) if not pd.isna(r.get('FTHG', 0)) else 0
+        ft_a = r.get('FTAG', 0) if not pd.isna(r.get('FTAG', 0)) else 0
+
         # points
         if ft_h > ft_a:
             home_pts, away_pts = 3, 0
@@ -159,6 +168,7 @@ def compute_features(df, rolling_n=5, h2h_k=5, elo_k=20, home_adv=100):
         team_season_stats[away]['ga'] += ft_h
         team_season_stats[home]['matches'] += 1
         team_season_stats[away]['matches'] += 1
+
         # shots if available
         for col, team in [('HS', home), ('AS', away)]:
             if col in r and not pd.isna(r[col]):
@@ -169,11 +179,11 @@ def compute_features(df, rolling_n=5, h2h_k=5, elo_k=20, home_adv=100):
 
         # update recent deques (points, gd, shots, goals)
         team_recent[home]['pts'].append(home_pts)
-        team_recent[home]['gd'].append(ft_h-ft_a)
+        team_recent[home]['gd'].append(ft_h - ft_a)
         team_recent[home]['shots'].append(r.get('HS', 0) if not pd.isna(r.get('HS', 0)) else 0)
         team_recent[home]['goals'].append(ft_h)
         team_recent[away]['pts'].append(away_pts)
-        team_recent[away]['gd'].append(ft_a-ft_h)
+        team_recent[away]['gd'].append(ft_a - ft_h)
         team_recent[away]['shots'].append(r.get('AS', 0) if not pd.isna(r.get('AS', 0)) else 0)
         team_recent[away]['goals'].append(ft_a)
 

@@ -1,0 +1,21 @@
+Simulation rows: 380
+I1 rows: 380
+Evaluation rows: 380
+Simulation duplicate keys: 0 rows (unique keys: 0)
+I1 duplicate keys: 0 rows (unique keys: 0)
+Merged rows with no match in I1: 0
+I1 keys that appear multiple times: 0
+Simulation rows where 'predicted' != max prob: 0
+Evaluation rows not merged as both: 0
+
+Sample paired rows (simulation row -> matched I1 FTR):
+2024-08-17 Parma vs Fiorentina -> pred: Away | FTR: D
+2024-08-17 Empoli vs Monza -> pred: Away | FTR: D
+2024-08-17 Milan vs Torino -> pred: Home | FTR: D
+2024-08-17 Genoa vs Inter -> pred: Away | FTR: D
+2024-08-18 Bologna vs Udinese -> pred: Home | FTR: D
+2024-08-18 Verona vs Napoli -> pred: Away | FTR: H
+2024-08-18 Cagliari vs Roma -> pred: Away | FTR: D
+2024-08-18 Lazio vs Venezia -> pred: Home | FTR: H
+2024-08-19 Lecce vs Atalanta -> pred: Away | FTR: A
+2024-08-19 Juventus vs Como -> pred: Home | FTR: H

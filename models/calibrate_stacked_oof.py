@@ -16,6 +16,7 @@ from sklearn.metrics import log_loss
 import matplotlib.pyplot as plt
 import sys
 import importlib.util
+import types
 
 ROOT = os.path.dirname(os.path.dirname(__file__))
 FEATS = os.path.join(ROOT, 'data', 'features.csv')
@@ -25,26 +26,31 @@ OUT_DIR = os.path.join(ROOT, 'artifacts')
 os.makedirs(OUT_DIR, exist_ok=True)
 
 
-class CalibratedStacked:
-    """Top-level calibrated stacked wrapper that is pickleable."""
-    def __init__(self, base_models, calibrator, feat_cols, classes_, base_names):
-        self.base_models = base_models
-        self.calibrator = calibrator
-        self.feature_cols = feat_cols
-        self.classes_ = classes_
-        self._base_names = list(base_names)
-
-    def predict_proba(self, X):
-        Xsub = X.reindex(columns=self.feature_cols).fillna(0.0)
-        probs = [self.base_models[name].predict_proba(Xsub) for name in self._base_names]
-        stacked = np.hstack(probs)
-        return self.calibrator.predict_proba(stacked)
-
-    def predict(self, X):
-        return self.predict_proba(X).argmax(axis=1)
-
-
-
+# import CalibratedStacked from module; if running as a script without package on sys.path,
+# fall back to loading the file directly so the class is available under a stable module name.
+try:
+    # ensure project root is on sys.path so `models` package imports work
+    if ROOT not in sys.path:
+        sys.path.insert(0, ROOT)
+    from models.calibrated_stack_wrapper import CalibratedStacked
+except Exception:
+    fn = os.path.join(os.path.dirname(__file__), 'calibrated_stack_wrapper.py')
+    if os.path.exists(fn):
+        spec = importlib.util.spec_from_file_location('models.calibrated_stack_wrapper', fn)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        # register both the package and submodule so pickling can import by name
+        sys.modules['models.calibrated_stack_wrapper'] = mod
+        if 'models' not in sys.modules:
+            pkg = types.ModuleType('models')
+            sys.modules['models'] = pkg
+        # attach submodule to package object
+        setattr(sys.modules['models'], 'calibrated_stack_wrapper', mod)
+        # set module package metadata
+        mod.__package__ = 'models'
+        CalibratedStacked = getattr(mod, 'CalibratedStacked')
+    else:
+        raise
 def load_artifact(path):
     obj = joblib.load(path)
     if isinstance(obj, dict):
@@ -80,7 +86,14 @@ def main():
 
     df = pd.read_csv(FEATS, parse_dates=['Date'])
     df = df.sort_values('Date').reset_index(drop=True)
-    y = df['Result'].map({'H':0,'D':1,'A':2})
+    # target column historically called 'Result' in some exports; fall back to 'FTR' (full-time result)
+    if 'Result' in df.columns:
+        y_raw = df['Result']
+    elif 'FTR' in df.columns:
+        y_raw = df['FTR']
+    else:
+        raise RuntimeError('No target column found in features.csv: expected "Result" or "FTR"')
+    y = y_raw.map({'H': 0, 'D': 1, 'A': 2})
 
     stacked_obj, feat_cols = load_artifact(STACKED_IN)
     if feat_cols is None:
@@ -151,6 +164,13 @@ def main():
 
     # Save calibrated wrapper: keep base_models and calibrator; wrapper will mimic StackedModel but apply calibrator
     calibrated = CalibratedStacked(base_models, calibrator, feat_cols, classes_, names)
+    # ensure pickle references the class under the wrapper module namespace so other scripts can unpickle
+    # The CalibratedStacked class lives in models.calibrated_stack_wrapper; make sure the
+    # class __module__ points there so joblib saves a resolvable reference.
+    try:
+        CalibratedStacked.__module__ = 'models.calibrated_stack_wrapper'
+    except Exception:
+        pass
     joblib.dump({'model': calibrated, 'features': feat_cols}, STACKED_OUT)
     print('Saved calibrated stacked model to', STACKED_OUT)
 
