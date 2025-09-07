@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ART = ROOT / 'artifacts'
+ART = ROOT / 'artifacts_2'
 
 
 def normalize_team(s: str) -> str:
@@ -257,7 +257,7 @@ def main():
 
     # betting eligibility check (simulate_betting rules)
     threshold = 1.25
-    min_fair = 1.4
+    min_fair = 0
     eligible = False
     if (fair_odds is not None) and (max_bookie_odds is not None):
         try:
